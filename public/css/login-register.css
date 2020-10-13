@@ -157,3 +157,28 @@ main{
     }
     
 }
+
+/* =========================================
+************ MOVILE SECTION  
+========================================= */
+@media only screen and (min-width:768px){
+    .pc{display:block;}
+    .pc{display:none;}
+}
+@media only screen and (max-width:768px){
+    .pc{display:none;}
+    .movile{display:block;}
+    /* ------------------------- */
+    .movile{width:100%;height:auto;
+        padding: 0;margin: 0;overflow: hidden;}
+    .contenedor__todo{width:100%;height:auto;
+        border:1px solid #f10202;}
+
+    .caja__trasera{width: 100%;
+        padding: 10px 20px;margin: 2rem 1rem;
+        display: flex;justify-content: center;
+        flex-direction: column;
+        backdrop-filter: blur(10px);
+        background-color: #0080ff80;
+    }
+}
