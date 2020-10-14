@@ -83,6 +83,10 @@
                   </button>
                </div>
          </form>
+
+         <div>
+            <p>Esta es una prueba para saber si esta sincronizado el proyecto</p>
+         </div>
    </div>
 
 
