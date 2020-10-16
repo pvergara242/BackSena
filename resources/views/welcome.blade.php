@@ -39,7 +39,7 @@
                <button><a href="/resources/views/sidebar/sidebar.blade.php">Entrar</a></button>
          </form>
 
-         <form class="formulario__register" method="POST" action="{{ route('register') }}">
+         <form class="formulario__register" method="POST" action="/register">
             @csrf
                <h2>Registrarse</h2>
                {{-- <input type="text" placeholder="Nombre Completo"> --}}
