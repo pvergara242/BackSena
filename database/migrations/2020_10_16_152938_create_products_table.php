@@ -22,9 +22,8 @@ class CreateProductsTable extends Migration
             $table->string('especificaciones');
             $table->string('cantidad');
             $table->string('productos');
-
-            $table->timestamps();
             
+            $table->timestamps();
         });
     }
 
