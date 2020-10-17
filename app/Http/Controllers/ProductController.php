@@ -2,75 +2,87 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $product = Product::latest()->paginate(5);
-        return view('products.index', compact('product') );
+        $products = Product::latest()->paginate(6);
+        return view('products.index', compact('products'));
     }
 
     public function create()
     {
-        //
+        return view('products.create', [
+            'Products' => new Product
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        //
+        Product::create($request->validated());
+        return redirect()->route('Products')->with('success', 'El Docente ha sido agregado satisfactoriamente a la base de datos del sistema');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        return view('products.show', [
+            'Products' => Product::findOrFail($id)
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $Products = Product::find($id);
+        return view('products.edit', compact('Products'));
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'last_name' => 'required',
+            'document' => 'required',
+            'date_of_birth' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'country' => 'required',
+            'city' => 'required',
+            'address' => 'required',
+            //    'avatar'=>'required',
+            'note' => 'required',
+            'coment' => 'required',
+
+        ]);
+
+        $Products = Product::find($id);
+        $Products->name = $request->get('name');
+        $Products->last_name = $request->get('last_name');
+        $Products->date_of_birth = $request->get('date_of_birth');
+        $Products->email = $request->get('email');
+        $Products->phone = $request->get('phone');
+        $Products->country = $request->get('country');
+        $Products->city = $request->get('city');
+        $Products->address = $request->get('address');
+        $Products->note = $request->get('note');
+        $Products->coment = $request->get('coment');
+        $Products->save();
+
+        return redirect()->route('Products')->with('primary', 'El Docente fue actaulizado en la base de datos correctamente.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
+    public function destroy($id)
     {
-        //
-    }
+        $Products = Product::find($id);
+        $Products->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-        //
+        return redirect()->route('Products')->with('danger', 'El Docente ha sido eliminado de la base de datos del sistema');
     }
 }
