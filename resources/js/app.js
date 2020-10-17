@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 let Turbolinks = require("turbolinks")
 Turbolinks.start()
@@ -28,3 +30,4 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+>>>>>>> 40cbcf9be8af061d7e26964702101e7c96086e9c
