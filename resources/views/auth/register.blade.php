@@ -1,4 +1,5 @@
-@extends('layouts.general')
+@extends('layouts.app')
+@include('components.nav')
 
 @section('content')
    <div class="row justify-content-center">
@@ -6,9 +7,16 @@
          <div class="card">
                <div class="card-header">{{ __('Register') }}</div>
 
+<<<<<<< HEAD
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+=======
                <div class="card-body">
                   <form method="POST" action="{{ route('register') }}">
                      @csrf
+>>>>>>> d446bf45d06d05a9b4eee49ab8486bb89afdf87b
 
                      <div class="form-group row">
                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
