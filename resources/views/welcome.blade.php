@@ -1,7 +1,8 @@
-@extends('layouts.general')
+@extends('layouts.app')
 
 @section('content')
 
+<<<<<<< HEAD
 
    <div class="contenedor__todo">
 
@@ -89,5 +90,8 @@
          </div>
    </div>
 
+=======
+<h1 class="text-center">Contabiliad SENA</h1>
+>>>>>>> d446bf45d06d05a9b4eee49ab8486bb89afdf87b
 
 @endsection
