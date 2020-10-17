@@ -14,16 +14,18 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 .childDashboard{width:100%;height:auto;;}
 
 .DashboardBody{width:100%;height:auto;
-   display:flex;}
+   display:flex;
+   padding: 0;margin: 0;}
 
 /* ===========   Section  CONTENIDO DEL DASHBOARD   =========== */ 
 .ctnBody{width:100%;height:auto;
-   border:1px solid magenta;}
+
+   border:1px solid green;}
 
 /* =========================================
 ************ SIDEBAR  
 ========================================= */
-.sidebar{width:300px;height:auto;min-height:100vh;
+.sidebar{width:300px;height:auto;
    padding: 2rem .5rem;
    background:var(--corporativo);}
 .childSidebar{width:100%;height:auto;}
@@ -53,6 +55,11 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
    padding-left:1rem;
    display:flex;align-items:center;justify-content:center;
    justify-content:space-between;}
+.cajaNavSuperior i{font-size:1.5rem;cursor: pointer;
+   border:1px solid #555;border-radius:3px;
+   display:block;line-height:1.5rem;padding: .5rem 1rem;;}
+.cajaNavSuperior i:hover{background:rgba(0,0,0,.5);color:#fff;
+   transform:scale(1.1) translateY(-1px);}
 .navTopRight{display:flex;align-items:center;justify-content:center;}
 
 /* =========================================
