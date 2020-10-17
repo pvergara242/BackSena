@@ -1,0 +1,64 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+   --corporativo:#fa7223;
+   --greenmio:#1abb9c;
+}
+body{width:100%;height:auto;
+   position:relative;margin:0;padding:0;
+   box-sizing:border-box;}
+body::-webkit-scrollbar {width:5px;height:50px;background:var(--greenmio);}
+body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
+.dashboard{width:100%;height:auto;
+   position:relative;margin:0;padding:0;
+   box-sizing:border-box;}
+.childDashboard{width:100%;height:auto;;}
+
+.DashboardBody{width:100%;height:auto;
+   display:flex;}
+
+/* ===========   Section  CONTENIDO DEL DASHBOARD   =========== */ 
+.ctnBody{width:100%;height:auto;
+   border:1px solid magenta;}
+
+/* =========================================
+************ SIDEBAR  
+========================================= */
+.sidebar{width:300px;height:auto;min-height:100vh;
+   padding: 2rem .5rem;
+   background:var(--corporativo);}
+.childSidebar{width:100%;height:auto;}
+.imgSidebar{width:100%;height:auto;
+   display:flex;align-items:center;justify-content:center;
+   flex-direction: column;}
+.imgSidebar img{width:150px;height:auto;
+   border-radius:50%;}
+.linksSidebar{width:100%;height:auto;}
+.linksSidebar li{list-style:none;}
+.linksSidebar a{text-decoration:none;color:#ededed;
+   display:block;line-height:1.5rem;font-size:1.1rem;
+   border-bottom:.5px solid #b6b6b677;
+   padding: .5rem 0;transition:all .2s ease;;}
+.linksSidebar a i {margin-right:.5rem;}
+.linksSidebar a:hover{background: #b6b6b6;color:#000;
+   transform:scale(1.05) translateY(-2px);}
+/* =========================================
+************ NAV SUPERIOR  
+========================================= */
+.childNavSuperior{width:100%;height:auto;
+   background:var(--corporativo);
+   display:flex;justify-content:space-between;}
+.boxNavSuperior{width:300px;height:auto;
+   display:flex;align-items:center;justify-content:center;;}
+.cajaNavSuperior{width:100%;height:auto;
+   padding-left:1rem;
+   display:flex;align-items:center;justify-content:center;
+   justify-content:space-between;}
+.navTopRight{display:flex;align-items:center;justify-content:center;}
+
+/* =========================================
+************ FOOTER  
+========================================= */
+.footer{width:100%;height:auto;
+   padding: 3px 2px;
+   background: #024979;color:#ddd;}
+.footer p{line-height:1.5rem;display:block;}
