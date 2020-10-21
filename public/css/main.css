@@ -115,3 +115,16 @@ body{width:100%;height:auto;margin:0;padding:0;
 .btnDelete button{width:28px;height:28px;
    background:var(--danger);border:0;color:#ddd;
    transition:all .2s ease;;}
+
+/* =========================================
+************ FORMULARIO  
+========================================= */
+.formulario{width:100%;height:auto;
+   display:flex;flex-wrap: wrap;
+   justify-content:space-between;}
+.inpForm{width:48%;height:auto;margin: 0;padding: 0;}
+.inpForm input{width:100%;height:auto;}
+@media only screen and (max-width:768px){
+   .formulario{display:flex;flex-direction: column;}
+   .inpForm{width:100%;height:auto;}
+}
