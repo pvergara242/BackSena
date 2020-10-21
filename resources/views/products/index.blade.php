@@ -15,6 +15,7 @@
         </div>
 
         <main class="ctnBody">
+        <h1 class="text-center">Registro de Productos</h1>
               @include('products._index')
         </main>
 

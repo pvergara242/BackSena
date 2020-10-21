@@ -6,7 +6,7 @@
 </div>
 
 <div class="tableBody">
-   <table id="clients" class="table table-secondary table-striped table-hover table-bordered">
+   <table id="products" class="table table-secondary table-striped table-hover table-bordered">
       <thead class="">
          <tr class="text-center border border-dander">
             <th class="">ID</th>
@@ -16,7 +16,8 @@
             <th class="">description</th>
             <th class="">especificaciones</th>
             <th class="">cantidad</th>
-            <th class="">productos equivalentes</th>
+            <th class="">productos</th>
+            <th class="">Acciones</th>
          </tr>
       </thead>
 
@@ -33,7 +34,8 @@
                <td>{{ $producto->description }}</td>
                <td>{{ $producto->especificaciones}}</td>
                <td>{{ $producto->cantidad }}</td>
-               <td>{{ $producto->productos equivalentes }}</td>
+               <td>{{ $producto->productos }}</td>
+              
                <td>
                   <div class="accions">
 
