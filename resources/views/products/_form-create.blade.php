@@ -74,5 +74,11 @@
       <p class="text-danger text-center "><strong>{{ $errors->first('productos equivalentes') }}</strong></p>
    </div>
 
+   @include('Custom.message')
+          
+   <button class="btn btn-success mt-3 mb-2" type="submit">Agregar Cliente</button>
+   
+   <a href="{{ route('cliente') }}" class="btn btn-danger mb-5 float-right"><i class="fas fa-window-close"></i> Cancelar</a>   
+
    
 </form>

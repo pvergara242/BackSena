@@ -35,7 +35,10 @@
                <td>{{ $producto->especificaciones}}</td>
                <td>{{ $producto->cantidad }}</td>
                <td>{{ $producto->productos }}</td>
+<<<<<<< HEAD
               
+=======
+>>>>>>> 96dda05ed3e4e0ecd0abe8b5d57e1671370e55fb
                <td>
                   <div class="accions">
 
