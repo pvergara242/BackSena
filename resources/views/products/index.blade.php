@@ -15,7 +15,7 @@
         </div>
 
         <main class="ctnBody">
-         pones aqui el include
+              @include('products._index')
         </main>
 
     </section>

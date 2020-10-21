@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @include('components.nav')
 
@@ -74,4 +75,4 @@
       </div>
    </div>
 </div>
-@endsection
+
