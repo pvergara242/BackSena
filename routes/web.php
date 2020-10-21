@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/product', 'ProductController@index')->name('product');
 
@@ -15,7 +15,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
 Route::get('ventas', 'VentasController@index')->name('ventas')->middleware('auth');
-Route::get('clientes', 'ClientesController@index')->name('clientes')->middleware('auth');
+Route::get('clientes', 'ClientController@index')->name('clientes')->middleware('auth');
 Route::get('inventario', 'InventarioController@index')->name('inventario')->middleware('auth');
 Route::get('compras', 'ComprasController@index')->name('compras')->middleware('auth');
 

@@ -14,16 +14,17 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 .childDashboard{width:100%;height:auto;;}
 
 .DashboardBody{width:100%;height:auto;
-   display:flex;}
+   display:flex;
+   padding: 0;margin: 0;}
 
 /* ===========   Section  CONTENIDO DEL DASHBOARD   =========== */ 
 .ctnBody{width:100%;height:auto;
-   border:1px solid magenta;}
+   padding: 2rem 1.5rem;}
 
 /* =========================================
 ************ SIDEBAR  
 ========================================= */
-.sidebar{width:300px;height:auto;min-height:100vh;
+.sidebar{width:300px;height:auto;
    padding: 2rem .5rem;
    background:var(--corporativo);}
 .childSidebar{width:100%;height:auto;}
@@ -53,6 +54,11 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
    padding-left:1rem;
    display:flex;align-items:center;justify-content:center;
    justify-content:space-between;}
+.cajaNavSuperior i{font-size:1.5rem;cursor: pointer;
+   border:1px solid #555;border-radius:3px;
+   display:block;line-height:1.5rem;padding: .5rem 1rem;;}
+.cajaNavSuperior i:hover{background:rgba(0,0,0,.5);color:#fff;
+   transform:scale(1.1) translateY(-1px);}
 .navTopRight{display:flex;align-items:center;justify-content:center;}
 
 /* =========================================
@@ -62,3 +68,26 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
    padding: 3px 2px;
    background: #024979;color:#ddd;}
 .footer p{line-height:1.5rem;display:block;}
+
+/* =========================================
+************  Pages                            
+========================================= */
+.modelPage{width:100%;height:auto;
+   position:relative;margin:0;padding:0;
+   box-sizing:border-box;}
+
+/* ===========   Section  Tables   =========== */ 
+.tableBody{width:100%;height:auto;;padding:0;
+   overflow:auto;white-space: nowrap;}
+.ctnTable{width:100%;height:auto;}
+
+.tableInfo{width:100%;height:auto;
+   margin:0 auto;overflow:auto;white-space: nowrap;}
+
+.tableBody::-webkit-scrollbar{width:2em;height:.5em; background:#101529;}
+.tableBody::-webkit-scrollbar-thumb{background:var(--greenmio);border-radius: 2px;}
+.table thead{width:100%;height:auto;
+   background:#101529;color:#ededed;}
+.tableFilas tr:nth-child(even){width:100%;height:auto;
+   background: #c9f1e1;transition:all .2s ease;;}
+.tableFilas tr:nth-child(even):hover{background: #a9d8c5;}
