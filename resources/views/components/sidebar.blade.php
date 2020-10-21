@@ -1,6 +1,6 @@
 <div class="childSidebar">
    <div class="imgSidebar">
-      <img src="{{ asset('img/logo.jpg') }}" alt="Perfil">
+      <img src="{{ asset('img/logo.png') }}" alt="Perfil">
       <p class="py-3"> <strong>{{ Auth::user()->name }} &nbsp;</strong></p>
    </div>
 
@@ -12,5 +12,7 @@
       <li><a href="{{ route('compras') }}"><i class="fas fa-shopping-basket"></i><span>Compras</span></a></li>
       <li><a href="{{ route('productos') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
    </div>
+   
+  
 
 </div>
