@@ -80,5 +80,23 @@ class DatabaseSeeder extends Seeder
             'created_at' => '2020-10-09 13:42:26',
             'updated_at' => '2020-10-09 13:42:32',
         ]);
+
+        DB::table('clients')->insert([
+            'document' => '6634355454',
+            'name' => 'Mercedes',
+            'last_name' => 'Maria',
+            'surname' => 'Perez',
+            'last_surname' => 'Trujillo',
+            'type' => '1',
+            'razon_social' => 'Me llamo yo',
+            'pais_code' => '+57',
+            'departamento_code' => '1',
+            'municipio_code' => '021',
+            'address' => 'Cll de los amores con tristezas',
+            'phone' => '316 423 8967',
+            'email' => 'cliente@cliente.com',
+            'created_at' => '2020-10-09 13:42:26',
+            'updated_at' => '2020-10-09 13:42:32',
+        ]);
     }
 }

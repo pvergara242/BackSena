@@ -16,6 +16,9 @@
 
         <main class="ctnBody">
           <h1 class="text-center">Registro de Clientes</h1>
+
+          @include('clients._index')
+
         </main>
 
     </section>
