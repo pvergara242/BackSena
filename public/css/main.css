@@ -2,16 +2,15 @@
 :root{
    --corporativo:#fa7223;
    --greenmio:#1abb9c;
+   --azul:#024979;
 }
-body{width:100%;height:auto;
-   position:relative;margin:0;padding:0;
+body{width:100%;height:auto;margin:0;padding:0;
    box-sizing:border-box;}
-body::-webkit-scrollbar {width:5px;height:50px;background:var(--greenmio);}
-body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 .dashboard{width:100%;height:auto;
    position:relative;margin:0;padding:0;
    box-sizing:border-box;}
-.childDashboard{width:100%;height:auto;;}
+.childDashboard{width:100%;height:auto;
+   overflow: hidden;;}
 
 .DashboardBody{width:100%;height:auto;
    display:flex;
@@ -19,12 +18,13 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 
 /* ===========   Section  CONTENIDO DEL DASHBOARD   =========== */ 
 .ctnBody{width:100%;height:auto;
-   padding: 2rem 1.5rem;}
+   overflow: hidden;
+   padding: 2rem 1.5rem;margin: 0;}
 
 /* =========================================
 ************ SIDEBAR  
 ========================================= */
-.sidebar{width:300px;height:auto;
+.sidebar{width:260px;min-width:260px;height:auto;
    padding: 2rem .5rem;
    background:var(--corporativo);}
 .childSidebar{width:100%;height:auto;}
@@ -42,6 +42,9 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 .linksSidebar a i {margin-right:.5rem;}
 .linksSidebar a:hover{background: #b6b6b6;color:#000;
    transform:scale(1.05) translateY(-2px);}
+@media only screen and (max-width:768px){
+   .sidebar{display:none;}
+}
 /* =========================================
 ************ NAV SUPERIOR  
 ========================================= */
@@ -66,28 +69,49 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 ========================================= */
 .footer{width:100%;height:auto;
    padding: 3px 2px;
-   background: #024979;color:#ddd;}
+   background:var(--azul);color:#ddd;}
 .footer p{line-height:1.5rem;display:block;}
 
 /* =========================================
 ************  Pages                            
 ========================================= */
-.modelPage{width:100%;height:auto;
-   position:relative;margin:0;padding:0;
+.modelPage{width:100%;max-width:100%;height:auto;
+   overflow: hidden;margin:0;padding:0;
    box-sizing:border-box;}
 
 /* ===========   Section  Tables   =========== */ 
-.tableBody{width:100%;height:auto;;padding:0;
+.tableBody{width:100%;height:auto;
+   ;padding:0;
    overflow:auto;white-space: nowrap;}
-.ctnTable{width:100%;height:auto;}
+.table{width:100%;height:auto;
+   padding:0;
+   overflow:auto;white-space: nowrap;}
 
-.tableInfo{width:100%;height:auto;
-   margin:0 auto;overflow:auto;white-space: nowrap;}
-
-.tableBody::-webkit-scrollbar{width:2em;height:.5em; background:#101529;}
-.tableBody::-webkit-scrollbar-thumb{background:var(--greenmio);border-radius: 2px;}
+.tableBody::-webkit-scrollbar{width:1em;height:10px; background:var(--azul);}
+.tableBody::-webkit-scrollbar-thumb{background:var(--corporativo);border-radius: 2px;}
 .table thead{width:100%;height:auto;
    background:#101529;color:#ededed;}
 .tableFilas tr:nth-child(even){width:100%;height:auto;
    background: #c9f1e1;transition:all .2s ease;;}
 .tableFilas tr:nth-child(even):hover{background: #a9d8c5;}
+
+/* =========================================
+************ BOTONES DE ACCIONES
+========================================= */
+.accions{display:flex;
+   justify-content:space-around;}
+
+.accions a{width:2em;height:2em;
+   color:#ededed;margin:0 .2em;
+   border-radius:4px;text-decoration:none;
+   display:flex;align-items:center;justify-content:center;  
+   transition:all .2s ease;;}
+.accions a:nth-child(1){background:var(--primary);}
+.accions a:nth-child(2){background:var(--success);}
+.accions a:nth-child(3){background:var(--danger);}
+.accions a:hover, .btnDelete button:hover{transform:scale(1.04) translateY(-2px);box-shadow:0 5px 5px rgba(0,0,0,.5);}
+.accions a:active, .btnDelete button:active{transform:scale(.90) translateY(2px);box-shadow:0 5px 5px rgba(0,0,0,.5) inset;}
+
+.btnDelete button{width:28px;height:28px;
+   background:var(--danger);border:0;color:#ddd;
+   transition:all .2s ease;;}

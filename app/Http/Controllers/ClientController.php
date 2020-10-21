@@ -3,29 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        Carbon::setLocale('es');
+        setlocale(LC_TIME, 'es_ES');
+        
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $clients = Client::latest()->paginate(4);
         return view('clients.index', compact('clients') );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('clients.create', [
+            'client' => new Client
+        ]);
     }
 
     /**
