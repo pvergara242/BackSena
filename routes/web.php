@@ -15,9 +15,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
 Route::get('ventas', 'VentasController@index')->name('ventas')->middleware('auth');
-Route::get('clientes', 'ClientController@index')->name('clientes')->middleware('auth');
 Route::get('inventario', 'InventarioController@index')->name('inventario')->middleware('auth');
 Route::get('compras', 'ComprasController@index')->name('compras')->middleware('auth');
+
+Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
+    Route::get('/', 'ClientController@index')->name('cliente'); 
+    Route::get('/create', 'ClientController@create')->name('cliente.create');
+    Route::get('/{cliente}', 'ClientController@show')->name('cliente.show');
+    Route::post('/', 'ClientController@store')->name('cliente.store');
+    Route::get('/{cliente}/edit', 'ClientController@edit')->name('cliente.edit');
+    Route::patch('/{cliente}', 'ClientController@update')->name('cliente.update');
+    Route::delete('/{cliente}', 'ClientController@destroy')->name('cliente.destroy');
+});
+
 
 
 Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
