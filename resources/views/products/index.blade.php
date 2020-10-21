@@ -15,7 +15,7 @@
         </div>
 
         <main class="ctnBody">
-          @include('products.contenido')
+         pones aqui el include
         </main>
 
     </section>

@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
 use App\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
     public function __construct()
     {
+        Carbon::setLocale('es');
+        setlocale(LC_TIME, 'es_ES');
+        
         $this->middleware('auth');
     }
 
