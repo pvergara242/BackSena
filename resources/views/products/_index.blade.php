@@ -33,7 +33,7 @@
                <td>{{ $producto->description }}</td>
                <td>{{ $producto->especificaciones}}</td>
                <td>{{ $producto->cantidad }}</td>
-               <td>{{ $producto->productos equivalentes }}</td>
+               <td>{{ $producto->productos }}</td>
                <td>
                   <div class="accions">
 

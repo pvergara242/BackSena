@@ -1,6 +1,6 @@
 <div class="childSidebar">
    <div class="imgSidebar">
-      <img src="{{ asset('img/logo.png') }}" alt="Perfil">
+      <img src="{{ asset('img/logo.jpg') }}" alt="Perfil">
       <p class="py-3"> <strong>{{ Auth::user()->name }} &nbsp;</strong></p>
    </div>
 

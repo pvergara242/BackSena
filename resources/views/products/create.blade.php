@@ -16,7 +16,7 @@
 
          <main class="ctnBody">
             <h1 class="text-center">Agregar Productos</h1>
-            @include('clients._form-create')
+            @include('products._form-create')
 
          </main>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Client;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Http\Requests\ClientRequest;
 
 class ClientController extends Controller
 {
@@ -29,7 +30,7 @@ class ClientController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(ClientRequest $request)
     {
         Client::create($request->validated() );
         return redirect()->route('cliente')->with('success', 'El CLIENTE ha sido agregado satisfactoriamente a la base de datos del sistema');
