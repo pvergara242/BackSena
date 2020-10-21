@@ -29,37 +29,23 @@ class ClientController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        Client::create($request->validated() );
+        return redirect()->route('cliente')->with('success', 'El CLIENTE ha sido agregado satisfactoriamente a la base de datos del sistema');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Client $client)
+    public function show($id)
     {
-        //
+        return view('clients.show', [
+            'client' => Client::findOrFail($id)
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Client $client)
+    public function edit($id)
     {
-        //
+        $client = Client::find($id);
+        return view('clients.edit', compact('client') );
     }
 
     /**

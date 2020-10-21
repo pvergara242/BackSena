@@ -29,7 +29,6 @@ Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
 });
 
 
-
 Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
     Route::get('/', 'ProductController@index')->name('productos'); 
     Route::get('/create', 'ProductController@create')->name('productos.create');
