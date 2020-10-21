@@ -19,8 +19,7 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
 
 /* ===========   Section  CONTENIDO DEL DASHBOARD   =========== */ 
 .ctnBody{width:100%;height:auto;
-
-   border:1px solid green;}
+   padding: 2rem 1.5rem;}
 
 /* =========================================
 ************ SIDEBAR  
@@ -69,3 +68,26 @@ body::-webkit-scrollbar-thumb {background:#101529;;border-radius: 2px;}
    padding: 3px 2px;
    background: #024979;color:#ddd;}
 .footer p{line-height:1.5rem;display:block;}
+
+/* =========================================
+************  Pages                            
+========================================= */
+.modelPage{width:100%;height:auto;
+   position:relative;margin:0;padding:0;
+   box-sizing:border-box;}
+
+/* ===========   Section  Tables   =========== */ 
+.tableBody{width:100%;height:auto;;padding:0;
+   overflow:auto;white-space: nowrap;}
+.ctnTable{width:100%;height:auto;}
+
+.tableInfo{width:100%;height:auto;
+   margin:0 auto;overflow:auto;white-space: nowrap;}
+
+.tableBody::-webkit-scrollbar{width:2em;height:.5em; background:#101529;}
+.tableBody::-webkit-scrollbar-thumb{background:var(--greenmio);border-radius: 2px;}
+.table thead{width:100%;height:auto;
+   background:#101529;color:#ededed;}
+.tableFilas tr:nth-child(even){width:100%;height:auto;
+   background: #c9f1e1;transition:all .2s ease;;}
+.tableFilas tr:nth-child(even):hover{background: #a9d8c5;}

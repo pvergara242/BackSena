@@ -16,6 +16,8 @@
 
         <main class="ctnBody">
           <h1 class="text-center">Dashboard Principal</h1>
+          to welcome <b>{{ Auth::user()->name }}</b><br>
+          your email <b>{{ Auth::user()->email }}</b>
         </main>
 
     </section>
