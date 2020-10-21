@@ -59,7 +59,6 @@
                            @method('DELETE')
                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
                         </form>
-     
                      </div>
 
                   </td>

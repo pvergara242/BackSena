@@ -52,35 +52,35 @@ class ClientController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'document' => 'required', 
-            'name' => 'required', 
-            'last_name' => 'required', 
-            'surname' => 'required', 
-            'last_surname' => 'required', 
-            'type' => 'required', 
-            'razon_social' => 'required', 
-            'pais_code' => 'required', 
+            'document'          => 'required', 
+            'name'              => 'required', 
+            'last_name'         => 'required', 
+            'surname'           => 'required', 
+            'last_surname'      => 'required', 
+            'type'              => 'required', 
+            'razon_social'      => 'required', 
+            'pais_code'         => 'required', 
             'departamento_code' => 'required', 
-            'municipio_code' => 'required', 
-            'address' => 'required', 
-            'phone' => 'required', 
-            'email' => 'required',
+            'municipio_code'    => 'required', 
+            'address'           => 'required', 
+            'phone'             => 'required', 
+            'email'             => 'required',
         ]);
 
         $client = Client::find($id);
-        $client->document = $request->get('document');
-        $client->name = $request->get('name');
-        $client->last_name = $request->get('last_name');
-        $client->surname = $request->get('surname');
-        $client->last_surname = $request->get('last_surname');
-        $client->type = $request->get('type');
-        $client->razon_social = $request->get('razon_social');
-        $client->pais_code = $request->get('pais_code');
-        $client->departamento_code = $request->get('departamento_code');
-        $client->municipio_code = $request->get('municipio_code');
-        $client->address = $request->get('address');
-        $client->phone = $request->get('phone');
-        $client->email = $request->get('email');
+        $client->document           = $request->get('document');
+        $client->name               = $request->get('name');
+        $client->last_name          = $request->get('last_name');
+        $client->surname            = $request->get('surname');
+        $client->last_surname       = $request->get('last_surname');
+        $client->type               = $request->get('type');
+        $client->razon_social       = $request->get('razon_social');
+        $client->pais_code          = $request->get('pais_code');
+        $client->departamento_code  = $request->get('departamento_code');
+        $client->municipio_code     = $request->get('municipio_code');
+        $client->address            = $request->get('address');
+        $client->phone              = $request->get('phone');
+        $client->email              = $request->get('email');
 
         return redirect()->route('cliente')->with('primary', 'El CLIENTE fue actaulizado en la base de datos correctamente.');
     }
