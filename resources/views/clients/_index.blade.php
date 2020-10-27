@@ -2,7 +2,7 @@
 <div class="modelPage">
    @include('partials.sessions_status')
    <div class="text-right py-2">
-      <a class="btn btn-success" href="{{ route('cliente.create') }}"> Agregar cliente</a>
+      <a class="btn btn-success" href="{{ route('cliente.create') }}"> Agregar tercero</a>
    </div>
 
    <div class="tableBody">

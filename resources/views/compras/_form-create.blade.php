@@ -1,4 +1,4 @@
-<!-- @include('partials.sessions_status')
+@include('partials.sessions_status')
 
 <form class="formulario" action="" method="POST" enctype="multipart/form-data">
 
@@ -57,7 +57,7 @@
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="NombreTercero" 
+         name="codigoTercero" 
          value="{{ old('NombreTercero') }}"
          placeholder="Nombre Tercero"
       >
@@ -181,4 +181,4 @@
    <a href="{{ route('compras') }}" class="btn btn-danger mb-5 float-right"><i class="fas fa-window-close"></i> Cancelar</a>   
 
    
-</form> -->
+</form>

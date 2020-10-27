@@ -31,3 +31,13 @@ Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
     Route::patch('/{productos}', 'ProductController@update')->name('productos.update');
     Route::delete('/{productos}', 'ProductController@destroy')->name('productos.destroy');
 });
+
+Route::group(['prefix' => 'compra', 'middleware' =>  ['auth']], function() {
+    Route::get('/', 'ComprasController@index')->name('compras'); 
+    Route::get('/create', 'ComprasController@create')->name('compras.create');
+    Route::get('/{compras}', 'ComprasController@show')->name('compras.show');
+    Route::post('/', 'ComprasController@store')->name('compras.store');
+    Route::get('/{compras}/edit', 'ComprasController@edit')->name('compras.edit');
+    Route::patch('/{compras}', 'ComprasController@update')->name('compras.update');
+    Route::delete('/{compras}', 'ComprasController@destroy')->name('compras.destroy');
+});

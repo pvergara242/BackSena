@@ -15,7 +15,7 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">Editar de Clientes</h1>
+            <h1 class="text-center">Editar tercero</h1>
 
             @include('clients._form-edit')
 
