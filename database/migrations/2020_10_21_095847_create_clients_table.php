@@ -22,7 +22,7 @@ class CreateClientsTable extends Migration
             $table->string('last_name', 120);
             $table->string('surname', 120);
             $table->string('last_surname', 120);
-            $table->enum('type', [1, 2]);
+            $table->enum('type', [1, 2])->default('1')->nullable();
             $table->string('razon_social', 200);
             $table->string('pais_code', 20);
             $table->string('departamento_code', 20);

@@ -1,10 +1,10 @@
 <?php
 
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Auth::routes();
+Route::get('/', function () {return view('auth.login');});
 
 Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
 Route::get('ventas', 'VentasController@index')->name('ventas')->middleware('auth');
