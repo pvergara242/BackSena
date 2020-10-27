@@ -57,7 +57,7 @@ class ClientController extends Controller
             'last_name'         => 'required', 
             'surname'           => 'required', 
             'last_surname'      => 'required', 
-            'type'              => 'required', 
+            'type'              => '', 
             'razon_social'      => 'required', 
             'pais_code'         => 'required', 
             'departamento_code' => 'required', 
@@ -90,6 +90,6 @@ class ClientController extends Controller
         $client = Client::find($id);
         $client->delete();
 
-        return redirect()->route('client')->with('danger', 'El CLIENTE ha sido eliminado de la base de datos del sistema');
+        return redirect()->route('cliente')->with('danger', 'El CLIENTE ha sido eliminado de la base de datos del sistema');
     }
 }
