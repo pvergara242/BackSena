@@ -124,15 +124,6 @@
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="phone" 
-         value="{{ $client->phone }}"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('phone') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
          name="email" 
          value="{{ $client->email }}"
       >
@@ -142,7 +133,7 @@
       <div class="col-md-4 mx-auto">
          <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
    
-      <button class="btn btn-success float-right" type="submit">Editar Cliente</button>
+      <button class="btn btn-success float-right" type="submit">Actualizar Cliente</button>
       
       </div>   
    </div>

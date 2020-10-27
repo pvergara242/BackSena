@@ -69,4 +69,5 @@
          </tbody>
       </table>
    </div>
+      <div class="pagination">{{ $clients->links() }}</div>
 </div>

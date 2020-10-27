@@ -81,6 +81,7 @@ class ClientController extends Controller
         $client->address            = $request->get('address');
         $client->phone              = $request->get('phone');
         $client->email              = $request->get('email');
+        $client->save();
 
         return redirect()->route('cliente')->with('primary', 'El CLIENTE fue actaulizado en la base de datos correctamente.');
     }

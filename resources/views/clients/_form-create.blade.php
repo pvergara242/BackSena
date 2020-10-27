@@ -137,29 +137,19 @@
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="phone" 
-         value="{{ old('phone') }}"
-         placeholder="Telefono"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('phone') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
          name="email" 
          value="{{ old('email') }}"
          placeholder="Correo electronico"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('email') }}</strong></p>
    </div>
+   <div class="container mb-5">
+      <div class="col-md-4 mx-auto">
+         <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+   
+      <button class="btn btn-success float-right" type="submit">Agregar Cliente</button>
+      </div>   
+   </div>
 
 </form>
 
-<div class="container mb-5">
-   <div class="col-md-4 mx-auto">
-      <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
-
-   <button class="btn btn-success float-right" type="submit">Editar Cliente</button>
-   </div>   
-</div>
