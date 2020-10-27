@@ -15,7 +15,7 @@
             <i class="fas fa-bars" id="sidebar_btn"></i>
         </label>
         <div class="left_area">
-            <h3>CD<span>MC</span></h3>
+            <h3>CD  <span>MC</span></h3>
         </div>
         <div class="right_area">
             <a href="#" class="logout_btn">Logout</a>
@@ -36,43 +36,34 @@
     </div>
     <!-- sidebar fin  -->
     
-    <form className="container-form"style="margin-top:100px; margin-left:420px;
+    <form className="container-form" style="margin-top:100px; margin-left:420px;
     width: 60%; justify-content: center;">
         <h2 className="title-form" style="text-align: center;"> REGISTRO DE PRODUCTOS</h2>
-        <fieldset className="contanier-fieldset">
-          <label for="codigo">Código</label>
-          <input id="codigo" className="input-field" type="text" placeholder="Código"></input>
-          <label for="unidad">Unidad</label>
-          <input id="unidad" className="input-field" placeholder="Unidad" style="width: 55%;"></input>
-          <br>
-          <br>
-          <label for="nombre"></label>Nombre del producto</label>
-          <input id="nombre" className="input-field" placeholder="Nombre" style="width: 70%;"></input>
-        
-        </fieldset>
-        <fieldset className="contanier-fieldset" style="height: 140px;">      
-            <label for="tipo">Tipo de inventario</label>
-            <input id="tipo" className="input-field" placeholder="Tipo"  style="margin-left: 240px; width: 40%;"></input>
+       
+        <fieldset className="contanier-fieldset" style="height: 200px; text-align: center; ">      
+            <label for="documento">Tipo de documento</label>
+            <input id="documento" className="input-field" placeholder="documento"></input>
             <br>
-            <label for="description" >Descripción</label>
-            <input id="description" className="input-field" placeholder="Escriba la descripción del producto "  style="margin-left: 280px;width: 40%;"></input>
+            <label for="numero"  type="number" >Número de documento</label>
+            <input id="numero" className="input-field" placeholder="Ingrese # documento"></input>
             <br>
-            <label for="especificacion">Especificaciones</label>
-            <input id="especificacion" className="input-field" placeholder="Escriba espacificaciones del producto "  style="margin-left: 245px;width: 40%;"></input>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" className="input-field" placeholder="Nombre"></input>
             <br>
-            <label for="cantidad" type="text">Cantidad</label>
-            <input id="cantidad" className="input-field" placeholder="Cantidad" style="margin-left: 300px;width: 40%;"></input>
+            <label for="telefono" type="number">Telefono</label>
+            <input id="telefono" className="input-field" placeholder="Telefono"></input>
             <br>
-            <label for="equivalente">Productos equivalentes</label>
-            <input id="equivalente" className="input-field" style="margin-left: 200px;width: 40%;"></input>        
+            <label for="direccion">Dirección</label>
+            <input id="direccion" className="input-field"></input>        
         </fieldset>
        
-        <div className="form-buttons" style="margin-left: 300px; margin-top: 30px;"> 
-          <button className="form-button">Cancelar</button>
-          <button className="form-button">Registrar</button>
+        <div className="form-buttons"> 
+          <button className="form-button" style="margin-left: 300px; margin-top: 30px;">Cancelar</button>
+          <button className="form-button">Registar</button>
         </div>
         
       </form>
+   
     
 </body> 
 </html>

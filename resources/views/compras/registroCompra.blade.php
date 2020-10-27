@@ -38,7 +38,7 @@
     
     <form className="container-form" style="margin-top:100px; margin-left:420px;
     width: 60%; justify-content: center;">
-        <h2 className="title-form" style="text-align: center;"> REGISTRO DE COMPRA</h2>
+        <h2 className="title-form" style="text-align: center;"> REGISTRO DE CLIENTES</h2>
        
         <fieldset className="contanier-fieldset" style="height: 200px; text-align: center; ">      
             <label for="documento">Tipo de documento</label>

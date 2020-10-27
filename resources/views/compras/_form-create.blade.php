@@ -1,184 +1,310 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="" method="POST" enctype="multipart/form-data">
+<form class="formulario" action="{{ route('compras.store') }}" method="POST" enctype="multipart/form-data">
 
    @csrf
 
    <div class="inpForm">
       <input class="form-control" 
          type="number" 
-         name="codigoComprobante" 
-         value="{{ old('codigoComprobante') }}"
-         placeholder="codigo Comprobante"
+         name="document" 
+         value="{{ old('document') }}"
+         placeholder="Documento"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('codigoComprobante') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p>
    </div>
 
    <div class="inpForm">
       {{-- <input class="form-control" 
          type="number" 
-         name="NumeroFactura" 
-         value="{{ old('NumeroFactura') }}"
-         placeholder="Numero Factura"
+         name="document" 
+         value="{{ old('document') }}"
+         placeholder="Documento"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('NumeroFactura') }}</strong></p> --}}
+      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p> --}}
    </div>
 
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="DetalleGeneral" 
-         value="{{ old('DetalleGeneral') }}"
-         placeholder="Detalle General"
+         name="name" 
+         value="{{ old('name') }}"
+         placeholder="Primer Nombre"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('DetalleGeneral') }}</strong></p>
-   </div>
-
-   <div class="inpForm">
-      <input class="form-control" 
-         type="date" 
-         name="FechaCompra" 
-         value="{{ old('FechaCompra') }}"
-         placeholder="Fecha Compra"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('FechaCompra') }}</strong></p>
-   </div>
-
-   <div class="inpForm">
-      <input class="form-control" 
-         type="number" 
-         name="codigoTercero" 
-         value="{{ old('codigoTercero') }}"
-         placeholder="Codigo Tercero"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('codigoTercero') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('name') }}</strong></p>
    </div>
 
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="codigoTercero" 
-         value="{{ old('NombreTercero') }}"
-         placeholder="Nombre Tercero"
+         name="last_name" 
+         value="{{ old('last_name') }}"
+         placeholder="Segundo Nombre"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('NombreTercero') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('last_name') }}</strong></p>
    </div>
-   
+
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="CodigoProducto" 
-         value="{{ old(' CodigoProducto') }}"
-         placeholder="Codigo Producto "
+         type="text" 
+         name="surname" 
+         value="{{ old('surname') }}"
+         placeholder="Primer apellido"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CodigoProducto') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('surname') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="last_surname" 
+         value="{{ old('last_surname') }}"
+         placeholder="Segundo apellido"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('last_surname') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="type" 
+         value="{{ old('type') }}"
+         placeholder="Tipo de usuario"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('type') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="NombreProducto" 
-         value="{{ old(' NombreProducto') }}"
-         placeholder="Nombre Producto "
+         name="razon_social" 
+         value="{{ old('razon_social') }}"
+         placeholder="Razon social"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('NombreProducto') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('razon_social') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="Cantidades" 
-         value="{{ old(' Cantidades') }}"
-         placeholder="Cantidades "
+         type="text" 
+         name="pais_code" 
+         value="{{ old('pais_code') }}"
+         placeholder="Codigo País"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('Cantidades') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('pais_code') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="UnidadesDisponibles" 
-         value="{{ old(' UnidadesDisponibles') }}"
-         placeholder="Unidades Disponibles "
+         type="text" 
+         name="departamento_code" 
+         value="{{ old('departamento_code') }}"
+         placeholder="Codigo Departamento"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('UnidadesDisponibles') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('departamento_code') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="CostoUnitarioCompra" 
-         value="{{ old(' CodigCostoUnitarioCompraoProducto') }}"
-         placeholder="Costo Unitario Compra"
+         type="text" 
+         name="municipio_code" 
+         value="{{ old('municipio_code') }}"
+         placeholder="Codigo Municipio"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CostoUnitarioCompra') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('municipio_code') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="CostoTotal" 
-         value="{{ old(' CostoTotal') }}"
-         placeholder="CostoTotal "
+         type="text" 
+         name="address" 
+         value="{{ old('address') }}"
+         placeholder="Dirección"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CostoTotal') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('address') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="TotalImpuestos" 
-         value="{{ old(' TotalImpuestos') }}"
-         placeholder="Total Impuestos "
+         type="text" 
+         name="phone" 
+         value="{{ old('phone') }}"
+         placeholder="Telefono"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('TotalImpuestos') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('phone') }}</strong></p>
    </div>
    
    <div class="inpForm">
       <input class="form-control" 
-         type="number" 
-         name="TotalRetenciónFuente" 
-         value="{{ old(' TotalRetenciónFuente') }}"
-         placeholder="Total Retención de la Fuente "
+         type="text" 
+         name="email" 
+         value="{{ old('email') }}"
+         placeholder="Correo electronico"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('TotalRetenciónFuente') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('email') }}</strong></p>
    </div>
+   <div class="container mb-5">
+      <div class="col-md-4 mx-auto">
+         <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
    
-   <div class="inpForm">
-      <input class="form-control" 
-         type="number" 
-         name="CodigoProducto" 
-         value="{{ old(' CodigoProducto') }}"
-         placeholder="Codigo Producto "
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CodigoProducto') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="number" 
-         name="PorcentajeImpuesto" 
-         value="{{ old(' PorcentajeImpuesto') }}"
-         placeholder="Porcentaje Impuesto "
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('PorcentajeImpuesto') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="number" 
-         name="PorcentajeRetefte" 
-         value="{{ old(' PorcentajeRetefte') }}"
-         placeholder="Porcentaje Retefte "
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('PorcentajeRetefte') }}</strong></p>
+      <button class="btn btn-success float-right" type="submit">Agregar Cliente</button>
+      </div>   
    </div>
 
-   @include('Custom.message')
-          
-   <button class="btn btn-success mt-3 mb-2" type="submit">Agregar Compra</button>
-   
-   <a href="{{ route('compras') }}" class="btn btn-danger mb-5 float-right"><i class="fas fa-window-close"></i> Cancelar</a>   
-
-   
 </form>
+
+@include('partials.sessions_status')
+
+<form class="formulario" action="{{ route('cliente.store') }}" method="POST" enctype="multipart/form-data">
+
+   @csrf
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="number" 
+         name="document" 
+         value="{{ old('document') }}"
+         placeholder="Documento"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      {{-- <input class="form-control" 
+         type="number" 
+         name="document" 
+         value="{{ old('document') }}"
+         placeholder="Documento"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p> --}}
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="name" 
+         value="{{ old('name') }}"
+         placeholder="Primer Nombre"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('name') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="last_name" 
+         value="{{ old('last_name') }}"
+         placeholder="Segundo Nombre"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('last_name') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="surname" 
+         value="{{ old('surname') }}"
+         placeholder="Primer apellido"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('surname') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="last_surname" 
+         value="{{ old('last_surname') }}"
+         placeholder="Segundo apellido"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('last_surname') }}</strong></p>
+   </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="type" 
+         value="{{ old('type') }}"
+         placeholder="Tipo de usuario"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('type') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="razon_social" 
+         value="{{ old('razon_social') }}"
+         placeholder="Razon social"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('razon_social') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="pais_code" 
+         value="{{ old('pais_code') }}"
+         placeholder="Codigo País"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('pais_code') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="departamento_code" 
+         value="{{ old('departamento_code') }}"
+         placeholder="Codigo Departamento"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('departamento_code') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="municipio_code" 
+         value="{{ old('municipio_code') }}"
+         placeholder="Codigo Municipio"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('municipio_code') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="address" 
+         value="{{ old('address') }}"
+         placeholder="Dirección"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('address') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="phone" 
+         value="{{ old('phone') }}"
+         placeholder="Telefono"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('phone') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="email" 
+         value="{{ old('email') }}"
+         placeholder="Correo electronico"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('email') }}</strong></p>
+   </div>
+   <div class="container mb-5">
+      <div class="col-md-4 mx-auto">
+         <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+   
+      <button class="btn btn-success float-right" type="submit">Agregar Cliente</button>
+      </div>   
+   </div>
+
+</form>
+

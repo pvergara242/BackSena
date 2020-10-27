@@ -1,6 +1,6 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="{{ route('compras.update', $client->id) }}" method="POST">
+<form class="formulario" action="{{ route('cliente.update', $client->id) }}" method="POST">
    @csrf
    @method('PATCH')
 
