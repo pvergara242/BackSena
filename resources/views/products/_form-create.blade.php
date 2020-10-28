@@ -1,6 +1,6 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+<form class="formulario" action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
 
    @csrf
 

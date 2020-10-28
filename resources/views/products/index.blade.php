@@ -17,7 +17,7 @@
         <main class="ctnBody">
           <h1 class="text-center">Registro de productos</h1>
 
-          @include('products_index')
+          @include('products._index')
 
         </main>
 
