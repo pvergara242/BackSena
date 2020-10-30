@@ -2,7 +2,7 @@
 <div class="modelPage">
    @include('partials.sessions_status')
    <div class="text-right py-2">
-      <a class="btn btn-success" href="{{ route('cliente.create') }}"> Agregar tercero</a>
+      <a class="btn btn-success" href="{{ route('productos.create') }}"> Agregar Producto</a>
    </div>
 
    <div class="tableBody">
@@ -30,31 +30,31 @@
    
          <tbody class="tableFilas">
             @guest
-               <h3 class="text-center bg-warning p-4">No existen cleintes para mostrar</h3>
+               <h3 class="text-center bg-warning p-4">No existen productos para mostrar</h3>
             @else 
-            @foreach ($clients as $cliente)
+            @foreach ($products as $productos)
                <tr>
-                  <td>{{ $cliente->id }}</td>
-                  <td>{{ $cliente->document }}</td>
-                  <td>{{ $cliente->name }}</td>
-                  <td>{{ $cliente->last_name }}</td>
-                  <td>{{ $cliente->surname }}</td>
-                  <td>{{ $cliente->last_surname }}</td>
-                  <td>{{ $cliente->type }}</td>
-                  <td>{{ $cliente->razon_social }}</td>
-                  <td>{{ $cliente->pais_code }}</td>
-                  <td>{{ $cliente->departamento_code }}</td>
-                  <td>{{ $cliente->municipio_code }}</td>
-                  <td>{{ $cliente->address }}</td>
-                  <td>{{ $cliente->phone }}</td>
-                  <td>{{ $cliente->email }}</td>
-                  <td>{{ $cliente->created_at }}</td>
+                  <td>{{ $productos->id }}</td>
+                  <td>{{ $productos->document }}</td>
+                  <td>{{ $productos->name }}</td>
+                  <td>{{ $productos->last_name }}</td>
+                  <td>{{ $productos->surname }}</td>
+                  <td>{{ $productos->last_surname }}</td>
+                  <td>{{ $productos->type }}</td>
+                  <td>{{ $productos->razon_social }}</td>
+                  <td>{{ $productos->pais_code }}</td>
+                  <td>{{ $productos->departamento_code }}</td>
+                  <td>{{ $productos->municipio_code }}</td>
+                  <td>{{ $productos->address }}</td>
+                  <td>{{ $productos->phone }}</td>
+                  <td>{{ $productos->email }}</td>
+                  <td>{{ $productos->created_at }}</td>
                   <td>
                      <div class="accions">
 
-                        <a class="btn btn-primary" href="{{ route('cliente.edit', $cliente->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
+                        <a class="btn btn-primary" href="{{ route('productos.edit', $productos->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
                         
-                        <form class="btnDelete" action="{{ route('cliente.destroy', $cliente->id) }}" method="POST">
+                        <form class="btnDelete" action="{{ route('productos.destroy', $productos->id) }}" method="POST">
                            @csrf
                            @method('DELETE')
                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
@@ -69,5 +69,5 @@
          </tbody>
       </table>
    </div>
-      <div class="pagination">{{ $clients->links() }}</div>
+      <div class="pagination">{{ $products->links() }}</div>
 </div>

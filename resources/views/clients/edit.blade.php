@@ -15,9 +15,9 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">Agregar productos</h1>
-            @include('partials.sessions_status')
-            @include('products._form-create')
+            <h1 class="text-center">Editar tercero</h1>
+
+            @include('clients._form-edit')
 
          </main>
 

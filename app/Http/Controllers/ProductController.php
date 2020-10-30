@@ -2,21 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
 use App\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
     public function __construct()
     {
+        Carbon::setLocale('es');
+        setlocale(LC_TIME, 'es_ES');
+        
         $this->middleware('auth');
     }
 
     public function index()
     {
         $products = Product::latest()->paginate(6);
-        return view('products.index', compact('products'));
+        return view('products.index', compact('products') );
     }
 
     public function create()
@@ -29,7 +33,7 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         Product::create($request->validated());
-        return redirect()->route('Products')->with('success', 'El Docente ha sido agregado satisfactoriamente a la base de datos del sistema');
+        return redirect()->route('Products')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
@@ -75,7 +79,7 @@ class ProductController extends Controller
         $Products->coment = $request->get('coment');
         $Products->save();
 
-        return redirect()->route('Products')->with('primary', 'El Docente fue actaulizado en la base de datos correctamente.');
+        return redirect()->route('Products')->with('primary', 'El producto fue actaulizado  correctamente.');
     }
 
     public function destroy($id)
@@ -83,6 +87,6 @@ class ProductController extends Controller
         $Products = Product::find($id);
         $Products->delete();
 
-        return redirect()->route('Products')->with('danger', 'El Docente ha sido eliminado de la base de datos del sistema');
+        return redirect()->route('Products')->with('danger', 'El producto ha sido eliminado correctamente');
     }
 }

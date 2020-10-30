@@ -15,9 +15,9 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">Agregar productos</h1>
+            <h1 class="text-center">Agregar cliente</h1>
             @include('partials.sessions_status')
-            @include('products._form-create')
+            @include('clients._form-create')
 
          </main>
 
