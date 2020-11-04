@@ -10,21 +10,34 @@
          <thead class="">
             <tr class="text-center border border-dander">
                <th class="">ID</th>
-               <th class="">Documento</th>
-               <th class="">Primer Nombre</th>
-               <th class="">Segundo Nombre</th>
-               <th class="">Primer Apellido</th>
-               <th class="">Segundo Apellido</th>
-               <th class="">Tipo de persona</th>
-               <th class="">Razon social</th>
-               <th class="">Código país</th>
-               <th class="">Código departamento</th>
-               <th class="">Código municipio</th>
-               <th class="">Dirección</th>
-               <th class="">Teléfono</th>
-               <th class="">Email</th>
-               <th class="">Fecha</th>
-               <th class="">Accicones</th>
+               <th class="">CodigoProducto</th>
+               <th class="">nombreProducto</th>
+               <th class="">CantidadProducto</th>
+               <th class="">consumo</th>
+               <th class="">MercanciaVenta</th>
+               <th class="">produccionInterna</th>
+               <th class="">ManejaLotes</th>
+               <th class="">esServicio</th>
+               <th class="">productoActivo</th>
+               <th class="">DatosFabricante</th>
+               <th class="">Medidas</th>
+               <th class="">UbicacionFisica</th>
+               <th class="">Referencia</th>
+               <th class="">Presentacion</th>
+               <th class="">ProductoEquivalente</th>
+               <th class="">StockMinimo</th>
+               <th class="">StockMaximo</th>
+               <th class="">TiempoReposicion</th>
+               <th class="">CuentaInventarios</th>
+               <th class="">CuentaContableIngreso</th>
+               <th class="">CuentaContableIngresoAjuste</th>
+               <th class="">DevolucionVentas</th>
+               <th class="">DevolucionCompras</th>
+               <th class="">CuentaContableGasto</th>
+               <th class="">CuentaContableGastoAjuste</th>
+               <th class="">ImpuestoCompras</th>
+               <th class="">ImpuestoVentas</th>
+               <th class="">Acciones</th>
             </tr>
          </thead>
    
@@ -35,20 +48,35 @@
             @foreach ($products as $productos)
                <tr>
                   <td>{{ $productos->id }}</td>
-                  <td>{{ $productos->document }}</td>
-                  <td>{{ $productos->name }}</td>
-                  <td>{{ $productos->last_name }}</td>
-                  <td>{{ $productos->surname }}</td>
-                  <td>{{ $productos->last_surname }}</td>
-                  <td>{{ $productos->type }}</td>
-                  <td>{{ $productos->razon_social }}</td>
-                  <td>{{ $productos->pais_code }}</td>
-                  <td>{{ $productos->departamento_code }}</td>
-                  <td>{{ $productos->municipio_code }}</td>
-                  <td>{{ $productos->address }}</td>
-                  <td>{{ $productos->phone }}</td>
-                  <td>{{ $productos->email }}</td>
-                  <td>{{ $productos->created_at }}</td>
+                  <td>{{ $productos->CodigoProducto }}</td>
+                  <td>{{ $productos->nombreProductos }}</td>
+                  <td>{{ $productos->CantidadProducto }}</td>
+                  <td>{{ $productos->consumo }}</td>
+                  <td>{{ $productos->MercanciaVenta }}</td>
+                  <td>{{ $productos->produccionInterna }}</td>
+                  <td>{{ $productos->ManejaLotes }}</td>
+                  <td>{{ $productos->esServicio }}</td>
+                  <td>{{ $productos->productoActivo }}</td>
+                  <td>{{ $productos->DatosFabricante }}</td>
+                  <td>{{ $productos->Medidas }}</td>
+                  <td>{{ $productos->UbicacionFisica }}</td>
+                  <td>{{ $productos->Referencia }}</td>
+                  <td>{{ $productos->Presentacion }}</td>
+                  <td>{{ $productos->ProductoEquivalente }}</td>
+                  <td>{{ $productos->StockMinimo }}</td>
+                  <td>{{ $productos->StockMaximo }}</td>
+                  <td>{{ $productos->TiempoReposicion }}</td>
+                  <td>{{ $productos->CuentaInventarios }}</td>
+                  <td>{{ $productos->CuentaContableIngreso }}</td>
+                  <td>{{ $productos->CuentaContableIngresoAjuste }}</td>
+                  <td>{{ $productos->DevolucionVentas }}</td>
+                  <td>{{ $productos->DevolucionCompras }}</td>
+                  <td>{{ $productos->CuentaContableGasto }}</td>
+                  <td>{{ $productos->CuentaContableGastoAjuste }}</td>
+                  <td>{{ $productos->ImpuestoCompras }}</td>
+                  <td>{{ $productos->ImpuestoVentas }}</td>
+              
+                  
                   <td>
                      <div class="accions">
 

@@ -1,153 +1,295 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+<form class="formulario" action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
 
    @csrf
 
    <div class="inpForm">
       <input class="form-control" 
          type="number" 
-         name="document" 
-         value="{{ old('document') }}"
-         placeholder="Documento"
+         name="CodigoProducto" 
+         value="{{ old('CodigoProducto') }}"
+         placeholder="CodigoProducto"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('CodigoProducto') }}</strong></p>
    </div>
-
+   
    <div class="inpForm">
-      {{-- <input class="form-control" 
+      <input class="form-control" 
+         type="text" 
+         name="nombreProducto" 
+         value="{{ old('nombreProducto') }}"
+         placeholder="nombreProducto"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('nombreProducto') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
          type="number" 
-         name="document" 
-         value="{{ old('document') }}"
-         placeholder="Documento"
+         name="CantidadProducto" 
+         value="{{ old('CantidadProducto') }}"
+         placeholder="CantidadProducto"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p> --}}
+      <p class="text-danger text-center "><strong>{{ $errors->first('CantidadProducto') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="consumo" 
+         value="{{ old('consumo') }}"
+         placeholder="consumo"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('consumo') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="MercanciaVenta" 
+         value="{{ old('MercanciaVenta') }}"
+         placeholder="Mercancia Venta"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('MercanciaVenta') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="produccionInterna" 
+         value="{{ old('produccionInterna') }}"
+         placeholder="produccionInterna"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('produccionInterna') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="ManejaLotes" 
+         value="{{ old('ManejaLotes') }}"
+         placeholder="Maneja Lotes"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('ManejaLotes') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="esServicio" 
+         value="{{ old('esServicio') }}"
+         placeholder="es Servicio"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('esServicio') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="productoActivo" 
+         value="{{ old('productoActivo') }}"
+         placeholder="producto Activo"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('productoActivo') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="DatosFabricante" 
+         value="{{ old('DatosFabricante') }}"
+         placeholder="Datos Fabricante"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('DatosFabricante') }}</strong></p>
+   </div>
+   
+     
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="Medidas" 
+         value="{{ old('Medidas') }}"
+         placeholder="Medidas"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('Medidas') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="UbicacionFisica" 
+         value="{{ old('UbicacionFisica') }}"
+         placeholder="Ubicacion Fisica"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('UbicacionFisica') }}</strong></p>
+   </div>
+
+
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="Referencia" 
+         value="{{ old('Referencia') }}"
+         placeholder="Referencia"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('Referencia') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="Presentacion" 
+         value="{{ old('Presentacion') }}"
+         placeholder="Presentacion"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('Presentacion') }}</strong></p>
    </div>
 
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="name" 
-         value="{{ old('name') }}"
-         placeholder="Primer Nombre"
+         name="ProductoEquivalente" 
+         value="{{ old('ProductoEquivalente') }}"
+         placeholder="Producto Equivalente"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('name') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('ProductoEquivalente') }}</strong></p>
    </div>
+
 
    <div class="inpForm">
       <input class="form-control" 
-         type="text" 
-         name="last_name" 
-         value="{{ old('last_name') }}"
-         placeholder="Segundo Nombre"
+         type="number" 
+         name="StockMinimo" 
+         value="{{ old('StockMinimo') }}"
+         placeholder="StockMinimo"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('last_name') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('StockMinimo') }}</strong></p>
+   </div>
+   
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="number" 
+         name="StockMaximo" 
+         value="{{ old('StockMaximo') }}"
+         placeholder="StockMaximo"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('StockMaximo') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="number" 
+         name="TiempoReposicion" 
+         value="{{ old('TiempoReposicion') }}"
+         placeholder="TiempoReposicion"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('TiempoReposicion') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="CuentaInventarios" 
+         value="{{ old('CuentaInventarios') }}"
+         placeholder="CuentaInventarios"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaInventarios') }}</strong></p>
+   </div>
+   
+      
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="CuentaContableIngreso" 
+         value="{{ old('CuentaContableIngreso') }}"
+         placeholder="CuentaContableIngreso"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngreso') }}</strong></p>
+   </div>
+   
+         
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="CuentaContableIngresoAjuste" 
+         value="{{ old('CuentaContableIngresoAjuste') }}"
+         placeholder="CuentaContableIngresoAjuste"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
+   </div>
+   
+          
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="DevolucionVentas" 
+         value="{{ old('DevolucionVentas') }}"
+         placeholder="Devolucion Ventas"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionVentas') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="DevolucionCompras" 
+         value="{{ old('DevolucionCompras') }}"
+         placeholder="Devolucion Compras"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
    </div>
 
+   
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
-         name="surname" 
-         value="{{ old('surname') }}"
-         placeholder="Primer apellido"
+         name="CuentaContableGasto" 
+         value="{{ old('CuentaContableGasto') }}"
+         placeholder="Cuenta Contable Gasto"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('surname') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableGasto') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="CuentaContableGastoAjuste" 
+         value="{{ old('CuentaContableGastoAjuste') }}"
+         placeholder="Cuenta Contable Gasto Ajuste"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableGastoAjuste') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="ImpuestoCompras" 
+         value="{{ old('ImpuestoCompras') }}"
+         placeholder="Impuesto Compras"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('ImpuestoCompras') }}</strong></p>
+   </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="ImpuestoVentas" 
+         value="{{ old('ImpuestoVentas') }}"
+         placeholder="Impuesto Ventas"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('ImpuestoVentas') }}</strong></p>
    </div>
 
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="last_surname" 
-         value="{{ old('last_surname') }}"
-         placeholder="Segundo apellido"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('last_surname') }}</strong></p>
-   </div>
 
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="type" 
-         value="{{ old('type') }}"
-         placeholder="Tipo de usuario"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('type') }}</strong></p>
-   </div>
+
    
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="razon_social" 
-         value="{{ old('razon_social') }}"
-         placeholder="Razon social"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('razon_social') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="pais_code" 
-         value="{{ old('pais_code') }}"
-         placeholder="Codigo País"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('pais_code') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="departamento_code" 
-         value="{{ old('departamento_code') }}"
-         placeholder="Codigo Departamento"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('departamento_code') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="municipio_code" 
-         value="{{ old('municipio_code') }}"
-         placeholder="Codigo Municipio"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('municipio_code') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="address" 
-         value="{{ old('address') }}"
-         placeholder="Dirección"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('address') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="phone" 
-         value="{{ old('phone') }}"
-         placeholder="Telefono"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('phone') }}</strong></p>
-   </div>
-   
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="email" 
-         value="{{ old('email') }}"
-         placeholder="Correo electronico"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('email') }}</strong></p>
-   </div>
    <div class="container mb-5">
       <div class="col-md-4 mx-auto">
-         <a href="{{ route('cliente') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+         <a href="{{ route('productos') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
    
-      <button class="btn btn-success float-right" type="submit">Agregar Cliente</button>
+      <button class="btn btn-success float-right" type="submit">Agregar Producto</button>
       </div>   
    </div>
 
