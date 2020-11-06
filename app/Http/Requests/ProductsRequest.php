@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProductRequest extends FormRequest
+class ProductsRequest extends FormRequest
 {
     public function authorize()
     {
@@ -14,7 +14,7 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'CodigoProducto'                  => ['required', 'min:6',], 
+            'CodigoProducto'                  => ['required', 'min:6'], 
             'nombreProducto'                  => ['required', 'min:3', 'max:120'], 
             'CantidadProducto'                => ['required', 'min:3', 'max:120'], 
             'consumo'                         => ['required', 'min:3', 'max:120'], 
@@ -41,6 +41,7 @@ class ProductRequest extends FormRequest
             'CuentaContableGastoAjuste'       => ['required', 'min:7', 'max:120' ],
             'ImpuestoCompras'                 => ['required', 'min:7', 'max:120' ],
             'ImpuestoVentas'                  => ['required', 'min:7', 'max:120' ],
+
         ];
     }
 }

@@ -15,6 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+
             $table->string('CodigoProducto');
             $table->string('nombreProducto');
             $table->string('CantidadProducto');
@@ -40,10 +41,7 @@ class CreateProductsTable extends Migration
             $table->string('CuentaContableGasto');
             $table->string('CuentaContableGastoAjuste');
             $table->string('ImpuestoCompras');
-            $table->string('ImpuestoVentas');
-         
-            
-            
+            $table->string('ImpuestoVentas');      
             
             $table->timestamps();
         });

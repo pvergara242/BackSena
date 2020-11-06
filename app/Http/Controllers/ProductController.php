@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Http\Requests\ProductRequest;
+use App\Http\Requests\ProductsRequest;
 
 class ProductController extends Controller
 {
@@ -30,10 +30,10 @@ class ProductController extends Controller
         ]);
     }
 
-    public function store(ProductRequest $request)
+    public function store(ProductsRequest $request)
     {
-        Product::create($request->validated());
-        return redirect()->route('Products')->with('success', 'El producto ha sido agregado satisfactoriamente ');
+        Product::create($request->validated() );
+        return redirect()->route('productos')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
