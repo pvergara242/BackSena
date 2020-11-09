@@ -46,7 +46,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $Products = Product::find($id);
-        return view('products.edit', compact('Products'));
+        return view('productos.edit', compact('Products'));
     }
     public function update(Request $request, $id)
     {
@@ -108,7 +108,7 @@ class ProductController extends Controller
         
         $Products->save();
 
-        return redirect()->route('Products')->with('primary', 'El producto fue actaulizado  correctamente.');
+        return redirect()->route('Products')->with('primary', 'El producto fue actualizado  correctamente.');
     }
 
     public function destroy($id)

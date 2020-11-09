@@ -1,6 +1,6 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="{{ route('products.update', $products->id) }}" method="POST">
+<form class="formulario" action="{{ route('productos.update', $products->id) }}" method="POST">
    @csrf
    @method('PATCH')
 
@@ -270,9 +270,9 @@
    
    <div class="container mb-5">
       <div class="col-md-4 mx-auto">
-         <a href="{{ route('productos') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+         <a href="{{ route('products') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
    
-      <button class="btn btn-success float-right" type="submit">Actualizar Cliente</button>
+      <button class="btn btn-success float-right" type="submit">Actualizar Producto</button>
       
       </div>   
    </div>
