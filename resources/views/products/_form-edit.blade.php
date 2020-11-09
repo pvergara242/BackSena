@@ -1,36 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@pvergara242 
-pvergara242
-/
-BackSena
-1
-00
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-BackSena/resources/views/products/_form-edit.blade.php
-
-Paola Andrea Vergara Lopez formulario productos
-Latest commit 4a74404 5 days ago
- History
- 0 contributors
-281 lines (243 sloc)  8.76 KB
-  
-@include('partials.sessions_status')
 
 <form class="formulario" action="{{ route('products.update', $products->id) }}" method="POST">
    @csrf
