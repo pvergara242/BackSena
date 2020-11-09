@@ -1,4 +1,6 @@
 
+  
+
 <div class="modelPage">
    @include('partials.sessions_status')
    <div class="text-right py-2">
@@ -6,7 +8,7 @@
    </div>
 
    <div class="tableBody">
-      <table id="products" class="table table-secondary table-striped table-hover table-bordered">
+      <table id="clients" class="table table-secondary table-striped table-hover table-bordered">
          <thead class="">
             <tr class="text-center border border-dander">
                <th class="">ID</th>
@@ -99,3 +101,4 @@
    </div>
       <div class="pagination">{{ $products->links() }}</div>
 </div>
+

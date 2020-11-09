@@ -1,3 +1,5 @@
+
+  
 @extends('layouts.panel')
 
 
@@ -30,4 +32,5 @@
 <main class="footer">
   @include('components.footer')
 </main>
+
 

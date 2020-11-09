@@ -1,4 +1,4 @@
-@include('partials.sessions_status')
+
 
 <form class="formulario" action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
 
@@ -294,4 +294,5 @@
    </div>
 
 </form>
+
 
