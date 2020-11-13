@@ -8,7 +8,7 @@
    </div>
 
    <div class="tableBody">
-      <table id="clients" class="table table-secondary table-striped table-hover table-bordered">
+      <table id="products" class="table table-secondary table-striped table-hover table-bordered">
          <thead class="">
             <tr class="text-center border border-dander">
                <th class="">ID</th>

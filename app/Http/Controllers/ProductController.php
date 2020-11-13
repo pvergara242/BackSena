@@ -46,7 +46,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $Products = Product::find($id);
-        return view('productos.edit', compact('Products'));
+        return view('products.edit', compact('Products'));
     }
     public function update(Request $request, $id)
     {
@@ -80,6 +80,8 @@ class ProductController extends Controller
             'ImpuestoVentas' => 'required',
 
         ]);
+        
+        dd($request);
 
         $Products = Product::find($id);
         $Products->CodigoProducto = $request->get('CodigoProducto');
@@ -108,7 +110,7 @@ class ProductController extends Controller
         
         $Products->save();
 
-        return redirect()->route('Products')->with('primary', 'El producto fue actualizado  correctamente.');
+        return redirect()->route('productos')->with('primary', 'El producto fue actualizado  correctamente.');
     }
 
     public function destroy($id)
@@ -116,6 +118,6 @@ class ProductController extends Controller
         $Products = Product::find($id);
         $Products->delete();
 
-        return redirect()->route('Products')->with('danger', 'El producto ha sido eliminado correctamente');
+        return redirect()->route('productos')->with('danger', 'El producto ha sido eliminado correctamente');
     }
 }

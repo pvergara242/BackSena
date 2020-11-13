@@ -46,7 +46,7 @@
             <label for="CodigoProducto">Codigo Producto</label>
             <input id="CodigoProducto" className="input-field" placeholder="CodigoProducto"></input>
             <br>
-            <label for="nombreProducto"  type="number" >nombre Producto</label>
+            <label for="nombreProducto"  type="text" >nombre Producto</label>
             <input id="nombreProducto" className="input-field" placeholder="nombreProducto"></input>
             <br>
             <label for="CantidadProducto">Cantidad Productobre</label>

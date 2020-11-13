@@ -1,6 +1,6 @@
+@include('partials.sessions_status')
 
-
-<form class="formulario" action="{{ route('productos.update', $products->id) }}" method="POST">
+<form class="formulario" action="{{ route('productos.update', $Products->id) }}" method="POST">
    @csrf
    @method('PATCH')
 
@@ -8,43 +8,34 @@
       <input class="form-control" 
          type="number" 
          name="CodigoProducto" 
-         value="{{ $products->CodigoProducto }}"
+         value="{{ $Products->CodigoProducto }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CodigoProducto') }}</strong></p>
    </div>
 
    <div class="inpForm">
-      {{-- <input class="form-control" 
+          <input class="form-control" 
          type="Text" 
          name="NombreProducto" 
-         value="{{ $products->NombreProducto }}"
+         value="{{ $Products->NombreProducto }}"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('NombreProducto') }}</strong></p> --}}
-   </div>
-
-   <div class="inpForm">
-      <input class="form-control" 
-         type="number" 
-         name="CantidadProducto" 
-         value="{{ $products->CantidadProducto }}"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CantidadProducto') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('NombreProducto') }}</strong></p>
    </div>
 
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
          name="consumo" 
-         value="{{ $products->consumo }}"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('last_name') }}</strong></p>
+         value="{{ $Products->consumo }}"
+         >
+      <p class="text-danger text-center "><strong>{{ $errors->first('consumo') }}</strong></p>
    </div>
 
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
          name="MercanciaVenta" 
-         value="{{ $products->MercanciaVenta }}"
+         value="{{ $Products->MercanciaVenta }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('MercanciaVenta') }}</strong></p>
    </div>
@@ -53,7 +44,7 @@
       <input class="form-control" 
          type="text" 
          name="produccionInterna" 
-         value="{{ $products->produccionInterna }}"
+         value="{{ $Products->produccionInterna }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('produccionInterna') }}</strong></p>
    </div>
@@ -62,7 +53,7 @@
       <input class="form-control" 
          type="text" 
          name="ManejaLotes" 
-         value="{{ $products->ManejaLotes }}"
+         value="{{ $Products->ManejaLotes }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('ManejaLotes') }}</strong></p>
    </div>
@@ -71,7 +62,7 @@
       <input class="form-control" 
          type="text" 
          name="esServicio" 
-         value="{{ $products->esServicio }}"
+         value="{{ $Products->esServicio }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('esServicio') }}</strong></p>
    </div>
@@ -80,7 +71,7 @@
       <input class="form-control" 
          type="text" 
          name="productoActivo" 
-         value="{{ $products->productoActivo }}"
+         value="{{ $Products->productoActivo }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('productoActivo') }}</strong></p>
    </div>
@@ -89,7 +80,7 @@
       <input class="form-control" 
          type="text" 
          name="DatosFabricante" 
-         value="{{ $products->DatosFabricante }}"
+         value="{{ $Products->DatosFabricante }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DatosFabricante') }}</strong></p>
    </div>
@@ -98,7 +89,7 @@
       <input class="form-control" 
          type="text" 
          name="Medidas" 
-         value="{{ $products->Medidas }}"
+         value="{{ $Products->Medidas }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('Medidas') }}</strong></p>
    </div>
@@ -107,7 +98,7 @@
       <input class="form-control" 
          type="text" 
          name="UbicacionFisica" 
-         value="{{ $products->UbicacionFisica }}"
+         value="{{ $Products->UbicacionFisica }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('UbicacionFisica') }}</strong></p>
    </div>
@@ -116,7 +107,7 @@
       <input class="form-control" 
          type="text" 
          name="Referencia" 
-         value="{{ $products->Referencia }}"
+         value="{{ $Products->Referencia }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('Referencia') }}</strong></p>
    </div>
@@ -125,7 +116,7 @@
       <input class="form-control" 
          type="text" 
          name="Presentacion" 
-         value="{{ $products->Presentacion }}"
+         value="{{ $Products->Presentacion }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('Presentacion') }}</strong></p>
    </div>
@@ -134,7 +125,7 @@
       <input class="form-control" 
          type="text" 
          name="ProductoEquivalente" 
-         value="{{ $products->ProductoEquivalente }}"
+         value="{{ $Products->ProductoEquivalente }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('ProductoEquivalente') }}</strong></p>
    </div>
@@ -143,7 +134,7 @@
       <input class="form-control" 
          type="number" 
          name="StockMinimo" 
-         value="{{ $products->StockMinimo }}"
+         value="{{ $Products->StockMinimo }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('StockMinimo') }}</strong></p>
    </div>
@@ -152,7 +143,7 @@
       <input class="form-control" 
          type="number" 
          name="StockMaximo" 
-         value="{{ $products->StockMaximo }}"
+         value="{{ $Products->StockMaximo }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('StockMaximo') }}</strong></p>
    </div>
@@ -161,7 +152,7 @@
       <input class="form-control" 
          type="number" 
          name="TiempoReposicion" 
-         value="{{ $products->TiempoReposicion }}"
+         value="{{ $Products->TiempoReposicion }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('TiempoReposicion') }}</strong></p>
    </div>
@@ -170,7 +161,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaInventarios" 
-         value="{{ $products->CuentaInventarios }}"
+         value="{{ $Products->CuentaInventarios }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaInventarios') }}</strong></p>
    </div>
@@ -179,7 +170,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableIngreso" 
-         value="{{ $products->CuentaContableIngreso }}"
+         value="{{ $Products->CuentaContableIngreso }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaInventarios') }}</strong></p>
    </div>
@@ -188,7 +179,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableIngresoAjuste" 
-         value="{{ $products->CuentaContableIngresoAjuste }}"
+         value="{{ $Products->CuentaContableIngresoAjuste }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
    </div>
@@ -198,7 +189,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableIngresoAjuste" 
-         value="{{ $products->CuentaContableIngresoAjuste }}"
+         value="{{ $Products->CuentaContableIngresoAjuste }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
    </div>
@@ -208,7 +199,7 @@
       <input class="form-control" 
          type="texto" 
          name="DevolucionVentas" 
-         value="{{ $products->DevolucionVentas }}"
+         value="{{ $Products->DevolucionVentas }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionVentas') }}</strong></p>
    </div>
@@ -218,7 +209,7 @@
       <input class="form-control" 
          type="texto" 
          name="DevolucionCompras" 
-         value="{{ $products->DevolucionCompras }}"
+         value="{{ $Products->DevolucionCompras }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
    </div>
@@ -227,7 +218,7 @@
       <input class="form-control" 
          type="texto" 
          name="DevolucionCompras" 
-         value="{{ $products->DevolucionCompras }}"
+         value="{{ $Products->DevolucionCompras }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
    </div>
@@ -236,7 +227,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableGasto" 
-         value="{{ $products->CuentaContableGasto }}"
+         value="{{ $Products->CuentaContableGasto }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableGasto') }}</strong></p>
    </div>
@@ -245,7 +236,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableGastoAjuste" 
-         value="{{ $products->DevoluCuentaContableGastoAjuste}}"
+         value="{{ $Products->DevoluCuentaContableGastoAjuste}}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableGastoAjuste') }}</strong></p>
    </div>
@@ -254,7 +245,7 @@
       <input class="form-control" 
          type="texto" 
          name="ImpuestoCompras" 
-         value="{{ $products->ImpuestoCompras}}"
+         value="{{ $Products->ImpuestoCompras}}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('ImpuestoCompras') }}</strong></p>
    </div>
@@ -263,7 +254,7 @@
       <input class="form-control" 
          type="texto" 
          name="ImpuestoVentas" 
-         value="{{ $products->ImpuestoVentas}}"
+         value="{{ $Products->ImpuestoVentas}}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('ImpuestoVentas') }}</strong></p>
    </div>
