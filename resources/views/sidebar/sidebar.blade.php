@@ -28,15 +28,16 @@
             <img src="./assets/images/logo.jpg" class="profile_image" alt="">
             <h4>CONTABILIDAD SENA</h4>
         </center>
-        <a href="./Ventas.html"><i class="fas fa-shopping-cart"></i><span>Ventas</span></a>
-        <a href="./RegistroClientes.html"><i class="fas fa-users"></i><span>Registro clientes</span></a>
-        <a href="./RegistroInventario.html"><i class="fas fa-dolly-flatbed"></i><span>Registro inventario</span></a>
-        <a href="./Compras.html"><i class="fas fa-shopping-basket"></i><span>Compras</span></a>
+        <a href="./Ventas.html"><i class="fas fa-shopping-cart"></i><span>Registro de Ventas</span></a>
+        <a href="./RegistroClientes.html"><i class="fas fa-users"></i><span>Registro de terceros</span></a>
+        <a href="./RegistroInventario.html"><i class="fas fa-dolly-flatbed"></i><span>Registro de inventario</span></a>
+        <a href="./Compras.html"><i class="fas fa-shopping-basket"></i><span>Rgistro de Compras</span></a>
         <a href="./Productos.html"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a>
     </div>
     <!-- sidebar fin  -->
     
     <div class="content"></div>
+  
     
 </body>
 </html>

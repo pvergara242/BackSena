@@ -13,7 +13,7 @@ class ClientRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'document'          => ['required', 'min:6',], 
+            'name'              => ['required', 'min:3', 'max:120'], 
+            'last_name'         => ['required', 'min:3', 'max:120'], 
+            'surname'           => ['required', 'min:3', 'max:120'], 
+            'last_surname'      => ['required', 'min:3', 'max:120'], 
+            'razon_social'      => ['required', 'min:3', 'max:120'], 
+            'pais_code'         => ['required', 'min:1', 'max:50'], 
+            'departamento_code' => ['required', 'min:1', 'max:50'], 
+            'municipio_code'    => ['required', 'min:1', 'max:50'], 
+            'address'           => ['required', 'min:7', 'max:200'], 
+            'phone'             => ['required', 'min:5', 'max:20'], 
+            'email'             => ['required', 'min:7', 'max:120' ],
         ];
     }
 }

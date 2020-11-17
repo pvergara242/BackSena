@@ -7,10 +7,12 @@
    <div class="linksSidebar">
       <li><a href="{{ route('dashboard') }}"><i class="fas fa-shopping-cart"></i><span>Panel</span></a></li>
       <li><a href="{{ route('ventas') }}"><i class="fas fa-shopping-cart"></i><span>Ventas</span></a></li>
-      <li><a href="{{ route('clientes') }}"><i class="fas fa-users"></i><span>Creación de terceros</span></a></li>
+      <li><a href="{{ route('cliente') }}"><i class="fas fa-users"></i><span>Creación de terceros</span></a></li>
       <li><a href="{{ route('inventario') }}"><i class="fas fa-dolly-flatbed"></i><span>Registro inventario</span></a></li>
       <li><a href="{{ route('compras') }}"><i class="fas fa-shopping-basket"></i><span>Compras</span></a></li>
       <li><a href="{{ route('productos') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
    </div>
+   
+  
 
 </div>
