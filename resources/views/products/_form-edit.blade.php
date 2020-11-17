@@ -16,10 +16,10 @@
    <div class="inpForm">
           <input class="form-control" 
          type="Text" 
-         name="NombreProducto" 
-         value="{{ $Products->NombreProducto }}"
+         name="nombreProducto" 
+         value="{{ $Products->nombreProducto }}"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('NombreProducto') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('nombreProducto') }}</strong></p>
    </div>
 
    <div class="inpForm">
@@ -172,7 +172,7 @@
          name="CuentaContableIngreso" 
          value="{{ $Products->CuentaContableIngreso }}"
       >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaInventarios') }}</strong></p>
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngreso') }}</strong></p>
    </div>
    
    <div class="inpForm">
@@ -203,17 +203,7 @@
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionVentas') }}</strong></p>
    </div>
-   
-    
-   <div class="inpForm">
-      <input class="form-control" 
-         type="texto" 
-         name="DevolucionCompras" 
-         value="{{ $Products->DevolucionCompras }}"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
-   </div>
-   
+      
    <div class="inpForm">
       <input class="form-control" 
          type="texto" 
@@ -236,7 +226,7 @@
       <input class="form-control" 
          type="texto" 
          name="CuentaContableGastoAjuste" 
-         value="{{ $Products->DevoluCuentaContableGastoAjuste}}"
+         value="{{ $Products->CuentaContableGastoAjuste}}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableGastoAjuste') }}</strong></p>
    </div>

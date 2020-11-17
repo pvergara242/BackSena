@@ -26,6 +26,7 @@ class Product extends Model
         'StockMaximo',
         'TiempoReposicion',
         'CuentaInventarios',
+        'CuentaContableIngreso',
         'CuentaContableIngresoAjuste',
         'DevolucionVentas',
         'DevolucionCompras',

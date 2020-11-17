@@ -35,6 +35,7 @@ class CreateProductsTable extends Migration
             $table->string('StockMaximo');
             $table->string('TiempoReposicion');
             $table->string('CuentaInventarios');
+            $table->string('CuentaContableIngreso');
             $table->string('CuentaContableIngresoAjuste');
             $table->string('DevolucionVentas');
             $table->string('DevolucionCompras');

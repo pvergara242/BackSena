@@ -240,6 +240,16 @@
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
    </div>
+   
+   <div class="inpForm">
+      <input class="form-control" 
+         type="text" 
+         name="CuentaContableIngreso" 
+         value="{{ old('CuentaContableIngreso') }}"
+         placeholder="CuentaContableIngreso"
+      >
+      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngreso') }}</strong></p>
+   </div>
 
    
    <div class="inpForm">
@@ -282,9 +292,6 @@
       <p class="text-danger text-center "><strong>{{ $errors->first('ImpuestoVentas') }}</strong></p>
    </div>
 
-
-
-   
    <div class="container mb-5">
       <div class="col-md-4 mx-auto">
          <a href="{{ route('productos') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  

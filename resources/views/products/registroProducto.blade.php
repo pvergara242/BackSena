@@ -49,14 +49,14 @@
             <label for="nombreProducto"  type="text" >nombre Producto</label>
             <input id="nombreProducto" className="input-field" placeholder="nombreProducto"></input>
             <br>
-            <label for="CantidadProducto">Cantidad Productobre</label>
+            <label for="CantidadProducto">Cantidad Producto</label>
             <input id="CantidadProducto" className="input-field" placeholder="Cantidad Producto"></input>
             <br>
-            <label for="consumo" type="number">consumo</label>
+            <label for="consumo" type="text">consumo</label>
             <input id="consumo" className="input-field" placeholder="consumo"></input>
             <br>
             <label for="MercanciaVenta">Mercancia Venta</label>
-            <input id="direcMercanciaVenta" className="input-field"></input>     
+            <input id="MercanciaVenta" className="input-field"></input>     
             <br>
             <label for="produccionInterna">produccion Interna</label>
             <input id="produccionInterna" className="input-field"></input>   
@@ -77,7 +77,7 @@
             <input id="Medidas" className="input-field"></input>   
             <br>
             <label for="UbicacionFisica">Ubicacion Fisica</label>
-            <input id="direcUbicacionFisica" className="input-field"></input>   
+            <input id="UbicacionFisica" className="input-field"></input>   
             <br>
             <label for="Referencia">Referencia</label>
             <input id="Referencia" className="input-field"></input>   
@@ -105,6 +105,9 @@
             <br>
             <label for="CuentaContableIngresoAjuste">Cuenta Contable Ingreso Ajuste</label>
             <input id="CuentaContableIngresoAjuste" className="input-field"></input>   
+            <br>
+            <label for="CuentaContableGastoAjuste">Cuenta Contable Gasto Ajuste</label>
+            <input id="CuentaContableGastoAjuste" className="input-field"></input>   
             <br>
             <label for="ImpuestoCompras">Impuesto Compras</label>
             <input id="ImpuestoCompras" className="input-field"></input>   

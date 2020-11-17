@@ -51,7 +51,7 @@
                <tr>
                   <td>{{ $productos->id }}</td>
                   <td>{{ $productos->CodigoProducto }}</td>
-                  <td>{{ $productos->nombreProductos }}</td>
+                  <td>{{ $productos->nombreProducto }}</td>
                   <td>{{ $productos->CantidadProducto }}</td>
                   <td>{{ $productos->consumo }}</td>
                   <td>{{ $productos->MercanciaVenta }}</td>
