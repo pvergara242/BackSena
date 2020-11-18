@@ -15,7 +15,10 @@
         </div>
 
         <main class="ctnBody">
-          <h1 class="text-center">Compras</h1>
+          <h1 class="text-center">Registro de tercero</h1>
+
+          @include('clients._index')
+
         </main>
 
     </section>

@@ -2,21 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProductRequest;
 use App\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductsRequest;
 
 class ProductController extends Controller
 {
     public function __construct()
     {
+        Carbon::setLocale('es');
+        setlocale(LC_TIME, 'es_ES');
+        
         $this->middleware('auth');
     }
 
     public function index()
     {
         $products = Product::latest()->paginate(6);
-        return view('products.index', compact('products'));
+        return view('products.index', compact('products') );
     }
 
     public function create()
@@ -26,10 +30,10 @@ class ProductController extends Controller
         ]);
     }
 
-    public function store(ProductRequest $request)
+    public function store(ProductsRequest $request)
     {
-        Product::create($request->validated());
-        return redirect()->route('Products')->with('success', 'El Docente ha sido agregado satisfactoriamente a la base de datos del sistema');
+        Product::create($request->validated() );
+        return redirect()->route('producto')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
@@ -47,35 +51,68 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required',
-            'last_name' => 'required',
-            'document' => 'required',
-            'date_of_birth' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'country' => 'required',
-            'city' => 'required',
-            'address' => 'required',
-            //    'avatar'=>'required',
-            'note' => 'required',
-            'coment' => 'required',
+            'CodigoProducto' => 'required',
+            'nombreProducto' => 'required',
+            'CantidadProducto' => 'required',
+            'consumo' => 'required',
+            'MercanciaVenta' => 'required',
+            'produccionInterna' => 'required',
+            'ManejaLotes' => 'required',
+            'esServicio' => 'required',
+            'productoActivo' => 'required',
+            'DatosFabricante' => 'required',
+            'Medidas' => 'required',
+            'UbicacionFisica' => 'required',
+            'Referencia' => 'required',
+            'Presentacion' => 'required',
+            'ProductoEquivalente' => 'required',
+            'StockMinimo' => 'required',
+            'StockMaximo' => 'required',
+            'TiempoReposicion' => 'required',
+            'CuentaInventarios' => 'required',
+            'CuentaContableIngreso' => 'required',
+            'CuentaContableIngresoAjuste' => 'required',
+            'DevolucionVentas' => 'required',
+            'DevolucionCompras' => 'required',
+            'CuentaContableGasto' => 'required',
+            'CuentaContableGastoAjuste' => 'required',
+            'ImpuestoCompras' => 'required',
+            'ImpuestoVentas' => 'required',
 
         ]);
+        
+        dd($request);
 
         $Products = Product::find($id);
-        $Products->name = $request->get('name');
-        $Products->last_name = $request->get('last_name');
-        $Products->date_of_birth = $request->get('date_of_birth');
-        $Products->email = $request->get('email');
-        $Products->phone = $request->get('phone');
-        $Products->country = $request->get('country');
-        $Products->city = $request->get('city');
-        $Products->address = $request->get('address');
-        $Products->note = $request->get('note');
-        $Products->coment = $request->get('coment');
+        $Products->CodigoProducto = $request->get('CodigoProducto');
+        $Products->nombreProducto = $request->get('nombreProducto');
+        $Products->CantidadProducto = $request->get('CantidadProducto');
+        $Products->consumo = $request->get('consumo');
+        $Products->MercanciaVenta = $request->get('MercanciaVenta');
+        $Products->produccionInterna = $request->get('produccionInterna');
+        $Products->ManejaLotes = $request->get('ManejaLotes');
+        $Products->esServicio = $request->get('esServicio');
+        $Products->productoActivo = $request->get('productoActivo');
+        $Products->DatosFabricante = $request->get('DatosFabricante');
+        $Products->Medidas = $request->get('Medidas');
+        $Products->UbicacionFisica = $request->get('UbicacionFisica');
+        $Products->Referencia = $request->get('Referencia');
+        $Products->Presentacion = $request->get('Presentacion');
+        $Products->ProductoEquivalente = $request->get('ProductoEquivalente');
+        $Products->StockMinimo = $request->get('StockMinimo');
+        $Products->StockMaximo = $request->get('StockMaximo');
+        $Products->TiempoReposicion = $request->get('TiempoReposicion');
+        $Products->CuentaInventarios = $request->get('CuentaInventarios');
+        $Products->CuentaContableIngreso = $request->get('CuentaContableIngreso');
+        $Products->CuentaContableIngresoAjuste = $request->get('CuentaContableIngresoAjuste');
+        $Products->CuentaContableGasto = $request->get('CuentaContableGasto');
+        $Products->CuentaContableGastoAjuste = $request->get('CuentaContableGastoAjuste');
+        $Products->ImpuestoCompras = $request->get('ImpuestoCompras');
+        $Products->ImpuestoVentas = $request->get('ImpuestoVentas');
+        
         $Products->save();
 
-        return redirect()->route('Products')->with('primary', 'El Docente fue actaulizado en la base de datos correctamente.');
+        return redirect()->route('producto')->with('primary', 'El producto fue actualizado  correctamente.');
     }
 
     public function destroy($id)
@@ -83,6 +120,6 @@ class ProductController extends Controller
         $Products = Product::find($id);
         $Products->delete();
 
-        return redirect()->route('Products')->with('danger', 'El Docente ha sido eliminado de la base de datos del sistema');
+        return redirect()->route('producto')->with('danger', 'El producto ha sido eliminado correctamente');
     }
 }
