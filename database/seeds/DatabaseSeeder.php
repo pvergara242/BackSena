@@ -78,6 +78,7 @@ class DatabaseSeeder extends Seeder
             'StockMinimo'               => 'we',
             'StockMaximo'               => 'we',
             'TiempoReposicion'          => 'we',
+            'CuentaContableIngreso'     => 'we',
             'CuentaInventarios'         => 'we',
             'CuentaContableIngresoAjuste' => 'we',
             'DevolucionVentas'          => 'we2',
