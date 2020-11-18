@@ -10,7 +10,7 @@
       <li><a href="{{ route('cliente') }}"><i class="fas fa-users"></i><span>Creación de terceros</span></a></li>
       <li><a href="{{ route('inventario') }}"><i class="fas fa-dolly-flatbed"></i><span>Registro inventario</span></a></li>
       <li><a href="{{ route('compras') }}"><i class="fas fa-shopping-basket"></i><span>Compras</span></a></li>
-      <li><a href="{{ route('productos') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
+      <li><a href="{{ route('producto') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
    </div>
    
   

@@ -20,10 +20,10 @@ Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
     Route::patch('/{cliente}', 'ClientController@update')->name('cliente.update');
     Route::delete('/{cliente}', 'ClientController@destroy')->name('cliente.destroy');
 });
-
+    
 
 Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
-    Route::get('/', 'ProductController@index')->name('productos'); 
+    Route::get('/', 'ProductController@index')->name('producto'); 
     Route::get('/create', 'ProductController@create')->name('productos.create');
     Route::get('/{productos}', 'ProductController@show')->name('productos.show');
     Route::post('/', 'ProductController@store')->name('productos.store');
@@ -33,7 +33,7 @@ Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
 });
 
 Route::group(['prefix' => 'compra', 'middleware' =>  ['auth']], function() {
-    Route::get('/', 'ComprasController@index')->name('compras'); 
+    Route::get('/', 'ComprasController@index')->name('compra'); 
     Route::get('/create', 'ComprasController@create')->name('compras.create');
     Route::get('/{compras}', 'ComprasController@show')->name('compras.show');
     Route::post('/', 'ComprasController@store')->name('compras.store');
