@@ -14,13 +14,22 @@
    </div>
 
    <div class="inpForm">
-          <input class="form-control" 
+         <input class="form-control" 
          type="Text" 
          name="nombreProducto" 
          value="{{ $Products->nombreProducto }}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('nombreProducto') }}</strong></p>
    </div>
+
+   <div class="inpForm">
+      <input class="form-control" 
+      type="Text" 
+      name="CantidadProducto" 
+      value="{{ $Products->CantidadProducto }}"
+   >
+   <p class="text-danger text-center "><strong>{{ $errors->first('CantidadProducto') }}</strong></p>
+</div>
 
    <div class="inpForm">
       <input class="form-control" 
@@ -184,17 +193,6 @@
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
    </div>
    
-    
-   <div class="inpForm">
-      <input class="form-control" 
-         type="texto" 
-         name="CuentaContableIngresoAjuste" 
-         value="{{ $Products->CuentaContableIngresoAjuste }}"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
-   </div>
-   
-    
    <div class="inpForm">
       <input class="form-control" 
          type="texto" 

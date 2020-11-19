@@ -220,7 +220,6 @@
       <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngresoAjuste') }}</strong></p>
    </div>
    
-          
    <div class="inpForm">
       <input class="form-control" 
          type="text" 
@@ -241,15 +240,6 @@
       <p class="text-danger text-center "><strong>{{ $errors->first('DevolucionCompras') }}</strong></p>
    </div>
    
-   <div class="inpForm">
-      <input class="form-control" 
-         type="text" 
-         name="CuentaContableIngreso" 
-         value="{{ old('CuentaContableIngreso') }}"
-         placeholder="CuentaContableIngreso"
-      >
-      <p class="text-danger text-center "><strong>{{ $errors->first('CuentaContableIngreso') }}</strong></p>
-   </div>
 
    
    <div class="inpForm">
