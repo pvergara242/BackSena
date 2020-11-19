@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function store(ProductsRequest $request)
     {
         Product::create($request->validated() );
-        return redirect()->route('producto')->with('success', 'El producto ha sido agregado satisfactoriamente ');
+        return redirect()->route('productos')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
@@ -42,7 +42,6 @@ class ProductController extends Controller
             'Products' => Product::findOrFail($id)
         ]);
     }
-
     public function edit($id)
     {
         $Products = Product::find($id);
@@ -105,14 +104,12 @@ class ProductController extends Controller
         $Products->CuentaInventarios = $request->get('CuentaInventarios');
         $Products->CuentaContableIngreso = $request->get('CuentaContableIngreso');
         $Products->CuentaContableIngresoAjuste = $request->get('CuentaContableIngresoAjuste');
-        $Products->CuentaContableGasto = $request->get('CuentaContableGasto');
-        $Products->CuentaContableGastoAjuste = $request->get('CuentaContableGastoAjuste');
         $Products->ImpuestoCompras = $request->get('ImpuestoCompras');
         $Products->ImpuestoVentas = $request->get('ImpuestoVentas');
         
         $Products->save();
 
-        return redirect()->route('producto')->with('primary', 'El producto fue actualizado  correctamente.');
+        return redirect()->route('productos')->with('primary', 'El producto fue actualizado  correctamente.');
     }
 
     public function destroy($id)
@@ -120,6 +117,6 @@ class ProductController extends Controller
         $Products = Product::find($id);
         $Products->delete();
 
-        return redirect()->route('producto')->with('danger', 'El producto ha sido eliminado correctamente');
+        return redirect()->route('productos')->with('danger', 'El producto ha sido eliminado correctamente');
     }
 }

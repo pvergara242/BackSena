@@ -22,7 +22,7 @@ Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
 });
     
 
-Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
+Route::group(['prefix' => 'productos', 'middleware' =>  ['auth']], function() {
     Route::get('/', 'ProductController@index')->name('producto'); 
     Route::get('/create', 'ProductController@create')->name('productos.create');
     Route::get('/{productos}', 'ProductController@show')->name('productos.show');
@@ -32,12 +32,12 @@ Route::group(['prefix' => 'product', 'middleware' =>  ['auth']], function() {
     Route::delete('/{productos}', 'ProductController@destroy')->name('productos.destroy');
 });
 
-Route::group(['prefix' => 'compra', 'middleware' =>  ['auth']], function() {
-    Route::get('/', 'ComprasController@index')->name('compra'); 
-    Route::get('/create', 'ComprasController@create')->name('compras.create');
-    Route::get('/{compras}', 'ComprasController@show')->name('compras.show');
-    Route::post('/', 'ComprasController@store')->name('compras.store');
-    Route::get('/{compras}/edit', 'ComprasController@edit')->name('compras.edit');
-    Route::patch('/{compras}', 'ComprasController@update')->name('compras.update');
-    Route::delete('/{compras}', 'ComprasController@destroy')->name('compras.destroy');
-});
+// Route::group(['prefix' => 'compras', 'middleware' =>  ['auth']], function() {
+//     Route::get('/', 'ComprasController@index')->name('compra'); 
+//     Route::get('/create', 'ComprasController@create')->name('compras.create');
+//     Route::get('/{compras}', 'ComprasController@show')->name('compras.show');
+//     Route::post('/', 'ComprasController@store')->name('compras.store');
+//     Route::get('/{compras}/edit', 'ComprasController@edit')->name('compras.edit');
+//     Route::patch('/{compras}', 'ComprasController@update')->name('compras.update');
+//     Route::delete('/{compras}', 'ComprasController@destroy')->name('compras.destroy');
+// });

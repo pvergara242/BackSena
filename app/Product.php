@@ -36,4 +36,4 @@ class Product extends Model
         'ImpuestoVentas',
         
     ];
-}
+}   
