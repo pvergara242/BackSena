@@ -60,25 +60,33 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-            'codigo' => '5423ngt',
-            'unidad' => '100',
-            'desripcion' => 'Zapatos para dama',         
-            'especificaciones' => 'De color Negro',         
-            'cantidad' => '30',
-            'productos' => 'Zapatos',
-            'created_at' => '2020-10-09 13:42:26',
-            'updated_at' => '2020-10-09 13:42:32',
-        ]);
-
-        DB::table('products')->insert([
-            'codigo' => '542gfngt',
-            'unidad' => '30',
-            'desripcion' => 'Carteras para dama',         
-            'especificaciones' => 'De color Negro',         
-            'cantidad' => '50',
-            'productos' => 'Carteras',
-            'created_at' => '2020-10-09 13:42:26',
-            'updated_at' => '2020-10-09 13:42:32',
+            'CodigoProducto'            => 'fdsa',
+            'nombreProducto'            => 'Tangas rojas',
+            'CantidadProducto'          => '3',
+            'consumo'                   => '1',
+            'MercanciaVenta'            => '32',
+            'produccionInterna'         => '3',
+            'ManejaLotes'               => '3',
+            'esServicio'                => '3',
+            'productoActivo'            => '2',
+            'DatosFabricante'           => 'De caucho',
+            'Medidas'                   => 'XXXXXXX',
+            'UbicacionFisica'           => 'los montes',
+            'Referencia'                => 'debajo del palo de mango',
+            'Presentacion'              => 'unica',
+            'ProductoEquivalente'       => 'we',
+            'StockMinimo'               => 'we',
+            'StockMaximo'               => 'we',
+            'TiempoReposicion'          => 'we',
+            'CuentaInventarios'         => 'we',
+            'CuentaContableIngreso'     => 'we',
+            'CuentaContableIngresoAjuste' => 'we',
+            'DevolucionVentas'          => 'we2',
+            'DevolucionCompras'         => 'we2',
+            'CuentaContableGasto'       => 'we',
+            'CuentaContableGastoAjuste' => 'we',
+            'ImpuestoCompras'           => 'we',
+            'ImpuestoVentas'            => 'we',
         ]);
 
         DB::table('clients')->insert([

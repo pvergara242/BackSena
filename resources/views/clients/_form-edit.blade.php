@@ -17,7 +17,7 @@
       {{-- <input class="form-control" 
          type="number" 
          name="document" 
-         value="{{ $client-> }}"
+         value="{{ $client-> document}}"
       >
       <p class="text-danger text-center "><strong>{{ $errors->first('document') }}</strong></p> --}}
    </div>
