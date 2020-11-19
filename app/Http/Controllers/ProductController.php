@@ -79,8 +79,6 @@ class ProductController extends Controller
             'ImpuestoVentas' => 'required',
 
         ]);
-        
-        dd($request);
 
         $Products = Product::find($id);
         $Products->CodigoProducto = $request->get('CodigoProducto');
