@@ -1,3 +1,5 @@
+
+  
 @extends('layouts.panel')
 
 
@@ -15,9 +17,9 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">REGISTRO DE CLIENTES</h1>
+            <h1 class="text-center">REGISTRO DE COMPRA</h1>
             @include('partials.sessions_status')
-            @include('clients._form-create')
+            @include('compras._form-create')
 
          </main>
 
@@ -30,4 +32,5 @@
 <main class="footer">
    @include('components.footer')
 </main>
+
 

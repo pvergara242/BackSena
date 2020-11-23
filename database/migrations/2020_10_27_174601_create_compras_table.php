@@ -13,21 +13,29 @@ class CreateComprasTable extends Migration
      */
     public function up()
     {
-        Schema::create('compras', function (Blueprint $table) {
+        Schema::create('compra', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('document', 20);
-            $table->string('name', 120);
-            $table->string('last_name', 120);
-            $table->string('surname', 120);
-            $table->string('last_surname', 120);
-            $table->enum('type', [1, 2])->default('1')->nullable();
-            $table->string('razon_social', 200);
-            $table->string('pais_code', 20);
-            $table->string('departamento_code', 20);
-            $table->string('municipio_code', 20);
-            $table->string('address', 180);
-            $table->string('phone', 20);
-            $table->string('email', 120);
+            $table->string('CodigoComprobante', 20);
+            $table->string('numeroFactura', 120);
+            $table->string('DetalleGeneral', 120);
+            $table->date('FechaCompra', 120);
+            $table->string('CodigoTercero', 120);
+            $table->string('nombreTercero', 120);
+            $table->string('codigoProducto', 200);
+            $table->string('nombreProducto', 20);
+            $table->string('Cantidades', 20);
+            $table->string('unidadesDisponibles', 20);
+            $table->string('CostoUnitarioCompra', 180);
+            $table->string('CostoTotalCompra', 20);
+            $table->string('Referencia', 120);
+            $table->string('Presentacion', 120);
+            $table->string('Impuestos', 120);
+            $table->string('Porcentajeimpuesto', 120);
+            $table->string('TotalImpuestos', 120);
+            $table->string('RetencionFuente', 120);
+            $table->string('TiempoReposicion', 120);
+            $table->string('PorcentajeRetefte', 120);
+            $table->string('TotalRetenciónFuente', 120);
             $table->timestamps();
         });
     }
@@ -39,6 +47,6 @@ class CreateComprasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compras');
+        Schema::dropIfExists('compra');
     }
 }

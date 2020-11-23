@@ -1,3 +1,5 @@
+
+  
 @extends('layouts.panel')
 
 
@@ -15,9 +17,9 @@
         </div>
 
         <main class="ctnBody">
-          <h1 class="text-center">LISTA DE CLIENTES</h1>
+          <h1 class="text-center">LISTA DE COMPRAS</h1>
 
-          @include('clients._index')
+          @include('compras._index')
 
         </main>
 
@@ -30,4 +32,5 @@
 <main class="footer">
   @include('components.footer')
 </main>
+
 

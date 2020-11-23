@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function store(ProductsRequest $request)
     {
         Product::create($request->validated() );
-        return redirect()->route('productos')->with('success', 'El producto ha sido agregado satisfactoriamente ');
+        return redirect()->route('producto')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
@@ -107,7 +107,7 @@ class ProductController extends Controller
         
         $Products->save();
 
-        return redirect()->route('productos')->with('primary', 'El producto fue actualizado  correctamente.');
+        return redirect()->route('producto')->with('primary', 'El producto fue actualizado  correctamente.');
     }
 
     public function destroy($id)
@@ -115,6 +115,6 @@ class ProductController extends Controller
         $Products = Product::find($id);
         $Products->delete();
 
-        return redirect()->route('productos')->with('danger', 'El producto ha sido eliminado correctamente');
+        return redirect()->route('producto')->with('danger', 'El producto ha sido eliminado correctamente');
     }
 }

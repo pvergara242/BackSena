@@ -286,7 +286,7 @@
       <div class="col-md-4 mx-auto">
          <a href="{{ route('producto') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
    
-      <button class="btn btn-success float-right" type="submit">Agregar Producto</button>
+      <button class="btn btn-success float-right" type="submit">REGISTRAR</button>
       </div>   
    </div>
 
