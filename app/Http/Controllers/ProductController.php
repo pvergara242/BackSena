@@ -42,7 +42,6 @@ class ProductController extends Controller
             'Products' => Product::findOrFail($id)
         ]);
     }
-
     public function edit($id)
     {
         $Products = Product::find($id);
@@ -103,8 +102,6 @@ class ProductController extends Controller
         $Products->CuentaInventarios = $request->get('CuentaInventarios');
         $Products->CuentaContableIngreso = $request->get('CuentaContableIngreso');
         $Products->CuentaContableIngresoAjuste = $request->get('CuentaContableIngresoAjuste');
-        $Products->CuentaContableGasto = $request->get('CuentaContableGasto');
-        $Products->CuentaContableGastoAjuste = $request->get('CuentaContableGastoAjuste');
         $Products->ImpuestoCompras = $request->get('ImpuestoCompras');
         $Products->ImpuestoVentas = $request->get('ImpuestoVentas');
         

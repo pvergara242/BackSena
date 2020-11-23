@@ -106,5 +106,29 @@ class DatabaseSeeder extends Seeder
             'created_at' => '2020-10-09 13:42:26',
             'updated_at' => '2020-10-09 13:42:32',
         ]);
+        
+        DB::table('compras')->insert([
+            'CodigoComprobante' => '001',
+            'numeroFactura' => '001',
+            'DetalleGeneral' => 'sdfghfdf',         
+            'FechaCompra' => '20/11/2020',
+            'CodigoTercero' => '003',
+            'nombreTercero' => 'paola',
+            'codigoProducto' => '2020',
+            'nombreProducto' => 'argolla niquel',
+            'Cantidades' => '1234567645',
+            'unidadesDisponibles' => '1234556754',
+            'CostoUnitarioCompra' => '123456763',
+            'CostoTotalCompra' => '234567653',
+            'Referencia' => 'pr345',
+            'Presentacion' => 'asdfghhtrgdf',
+            'Impuestos' => '1923456787545',
+            'Porcentajeimpuesto' => '12345677632',
+            'TotalImpuestos' => '1256743',
+            'RetencionFuente' => 'sdfbjhre',
+            'TiempoReposicion' => '12345675665',
+            'PorcentajeRetefte' => '1234567754635',
+            'TotalRetenciónFuente' => '1234567432',
+        ]);
     }
 }
