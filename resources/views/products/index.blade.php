@@ -1,6 +1,4 @@
-
-  
-@extends('layouts.panel')
+@include('layouts.panel')
 
 
 <main class="dashboard">
