@@ -45,7 +45,7 @@ class ComprasController extends Controller
     public function edit($id)
     {
         $compras = Compras::find($id);
-        return view('compras.edit', compact('Compras'));
+        return view('compras.edit', compact('Compra'));
     }
     public function update(Request $request, $id)
     {
