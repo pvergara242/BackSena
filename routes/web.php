@@ -41,3 +41,13 @@ Route::group(['prefix' => 'compras', 'middleware' =>  ['auth']], function() {
     Route::patch('/{compras}', 'ComprasController@update')->name('compra.update');
     Route::delete('/{compras}', 'ComprasController@destroy')->name('compra.destroy');
 });
+
+Route::group(['prefix' => 'entregaProductos', 'middleware' =>  ['auth']], function() {
+    Route::get('/', 'EntregaProductsController@index')->name('entregaProductos'); 
+    Route::get('/create', 'EntregaProductsController@create')->name('entregaProductos.create');
+    Route::get('/{entregaProductos}', 'EntregaProductsController@show')->name('entregaProductos.show');
+    Route::post('/', 'EntregaProductsController@store')->name('entregaProductos.store');
+    Route::get('/{entregaProductos}/edit', 'EntregaProductsController@edit')->name('entregaProductos.edit');
+    Route::patch('/{entregaProductos}', 'EntregaProductsController@update')->name('entregaProductos.update');
+    Route::delete('/{entregaProductos}', 'EntregaProductsController@destroy')->name('entregaProductos.destroy');
+});

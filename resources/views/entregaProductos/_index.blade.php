@@ -8,7 +8,7 @@
     </div>
  
     <div class="tableBody">
-       <table id="products" class="table table-secondary table-striped table-hover table-bordered">
+       <table id="entregaProductos" class="table table-secondary table-striped table-hover table-bordered">
           <thead class="">
              <tr class="text-center border border-dander">
                 <th class="">ID</th>
@@ -38,30 +38,30 @@
     
           <tbody class="tableFilas">
              @guest
-                <h3 class="text-center bg-warning p-4">No existen productos para mostrar</h3>
+                <h3 class="text-center bg-warning p-4">No hay entregas de productos por mostrar</h3>
              @else 
-             @foreach ($products as $productos)
+             @foreach ($EntregaProductos as $EntregaProductos)
                 <tr>
-                   <td>{{ $productos->id }}</td>
-                   <td>{{ $productos->fechaSolicitud }}</td>
-                   <td>{{ $productos->area }}</td>
-                   <td>{{ $productos->codigoRegional }}</td>
-                   <td>{{ $productos->nombreRegional }}</td>
-                   <td>{{ $productos->codigoCentroCostos }}</td>
-                   <td>{{ $productos->nombreCentroCostos }}</td>
-                   <td>{{ $productos->coordinadorArea }}</td>
-                   <td>{{ $productos->numeroDocumento }}</td>
-                   <td>{{ $productos->nombreServidorPublico }}</td>
-                   <td>{{ $productos->numeroDocumentoServidor }}</td>
-                   <td>{{ $productos->codigoFichaCaracterizacion }}</td>
-                   <td>{{ $productos->codigoSena }}</td>
-                   <td>{{ $productos->descripcionBien }}</td>
-                   <td>{{ $productos->unidadMedida }}</td>
-                   <td>{{ $productos->cantidadSolicitada }}</td>
-                   <td>{{ $productos->cantidadEntregada }}</td>
-                   <td>{{ $productos->observaciones }}</td>
-                   <td>{{ $productos->nombre }}</td>
-                   <td>{{ $productos->cargo }}</td>
+                   <td>{{ $EntregaProductos->id }}</td>
+                   <td>{{ $EntregaProductos->fechaSolicitud }}</td>
+                   <td>{{ $EntregaProductos->area }}</td>
+                   <td>{{ $EntregaProductos->codigoRegional }}</td>
+                   <td>{{ $EntregaProductos->nombreRegional }}</td>
+                   <td>{{ $EntregaProductos->codigoCentroCostos }}</td>
+                   <td>{{ $EntregaProductos->nombreCentroCostos }}</td>
+                   <td>{{ $EntregaProductos->coordinadorArea }}</td>
+                   <td>{{ $EntregaProductos->numeroDocumento }}</td>
+                   <td>{{ $EntregaProductos->nombreServidorPublico }}</td>
+                   <td>{{ $EntregaProductos->numeroDocumentoServidor }}</td>
+                   <td>{{ $EntregaProductos->codigoFichaCaracterizacion }}</td>
+                   <td>{{ $EntregaProductos->codigoSena }}</td>
+                   <td>{{ $EntregaProductos->descripcionBien }}</td>
+                   <td>{{ $EntregaProductos->unidadMedida }}</td>
+                   <td>{{ $EntregaProductos->cantidadSolicitada }}</td>
+                   <td>{{ $EntregaProductos->cantidadEntregada }}</td>
+                   <td>{{ $EntregaProductos->observaciones }}</td>
+                   <td>{{ $EntregaProductos->nombre }}</td>
+                   <td>{{ $EntregaProductos->cargo }}</td>
 
                    <td>
                       <div class="accions">
