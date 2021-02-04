@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\EntregaProduct;
+use App\EntregaProducts;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests\EntregaProductosRequest;
@@ -19,32 +19,32 @@ class EntregaProductController extends Controller
 
     public function index()
     {
-        $entregaProductos = EntregaProduct::latest()->paginate(6);
+        $entregaProductos = EntregaProducts::latest()->paginate(6);
         return view('entregaProductos.index', compact('entregaProductos') );
     }
 
     public function create()
     {
         return view('entregaProductos.create', [
-            'entregaProductos' => new EntregaProduct
+            'entregaProductos' => new EntregaProducts
         ]);
     }
 
     public function store(EntregaProductosRequest $request)
     {
-        EntregaProduct::create($request->validated() );
+        EntregaProducts::create($request->validated() );
         return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
     }
 
     public function show($id)
     {
         return view('entregaProductos.show', [
-            'entregaProductos' => EntregaProduct::findOrFail($id)
+            'entregaProductos' => EntregaProducts::findOrFail($id)
         ]);
     }
     public function edit($id)
     {
-        $entregaProductos = EntregaProduct::find($id);
+        $entregaProductos = EntregaProducts::find($id);
         return view('entregaProductos.edit', compact('entregaProductos'));
     }
     public function update(Request $request, $id)
@@ -72,7 +72,7 @@ class EntregaProductController extends Controller
 
         ]);
 
-        $EntregaProductos = EntregaProduct::find($id);
+        $EntregaProductos = EntregaProducts::find($id);
         $EntregaProductos->fechaSolicitud = $request->get('fechaSolicitud');
         $EntregaProductos->area = $request->get('area');
         $EntregaProductos->codigoRegional = $request->get('codigoRegional');
@@ -99,7 +99,7 @@ class EntregaProductController extends Controller
 
     public function destroy($id)
     {
-        $EntregaProductos = EntregaProduct::find($id);
+        $EntregaProductos = EntregaProducts::find($id);
         $EntregaProductos->delete();
 
         return redirect()->route('entregaproductos')->with('danger', 'La entrega del producto ha sido eliminada correctamente.');

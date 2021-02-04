@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EntregaProduct extends Model
+class EntregaProducts extends Model
 {
     protected $fillable = [
         'fechaSolicitud', 
