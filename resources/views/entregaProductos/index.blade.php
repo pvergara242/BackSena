@@ -16,7 +16,7 @@
         </div>
 
         <main class="ctnBody">
-          <h1 class="text-center">LISTA DE PRODUCTOS</h1>
+          <h1 class="text-center">LISTA DE ENTREGA DE PRODUCTOS</h1>
 
           @include('entregaProductos._index')
 

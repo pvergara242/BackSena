@@ -35,7 +35,7 @@
         <a href="./RegistroInventario.html"><i class="fas fa-dolly-flatbed"></i><span>Registro inventario</span></a>
         <a href="./Compras.html"><i class="fas fa-shopping-basket"></i><span>Compras</span></a>
         <a href="./Productos.html"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a>
-        <a href="./entregaProductos.html"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a>
+        <a href="./entregaProductos.html"><i class="fas fa-shopping-basket"></i><span>Registro de entrega de productos</span></a>
     </div>
     <!-- sidebar fin  -->
     
@@ -98,8 +98,8 @@
             <label for="nombre">Nombre</label>
             <input id="nombre" className="input-field"></input>   
             <br>
-            <label for="Cargo">Cargo</label>
-            <input id="Cargo" className="input-field"></input> 
+            <label for="cargo">Cargo</label>
+            <input id="cargo" className="input-field"></input> 
 
         </fieldset>
        
