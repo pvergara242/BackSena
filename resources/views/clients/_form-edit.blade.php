@@ -14,7 +14,7 @@
    </div>
 
    <div class="inpForm">
-      {{-- <input class="form-control" 
+       <input class="form-control" 
          type="number" 
          name="document" 
          value="{{ $client-> document}}"

@@ -25,7 +25,7 @@ class CreateComprasTable extends Migration
             $table->string('nombreProducto', 20);
             $table->string('Cantidades', 20);
             $table->string('unidadesDisponibles', 20);
-            $table->string('CostoUnitarioCompra', 180);
+            $table->string('ReferenCostoUnitarioCompra', 180);
             $table->string('CostoTotalCompra', 20);
             $table->string('Referencia', 120);
             $table->string('Presentacion', 120);
