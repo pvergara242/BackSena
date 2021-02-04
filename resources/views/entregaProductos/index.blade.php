@@ -1,3 +1,4 @@
+
 @include('layouts.panel')
 
 
@@ -15,9 +16,10 @@
         </div>
 
         <main class="ctnBody">
-          <h1 class="text-center">Dashboard Principal</h1>
-          to welcome <b>{{ Auth::user()->name }}</b><br>
-          your email <b>{{ Auth::user()->email }}</b>
+          <h1 class="text-center">LISTA DE ENTREGA DE PRODUCTOS</h1>
+
+          @include('entregaProductos._index')
+
         </main>
 
     </section>

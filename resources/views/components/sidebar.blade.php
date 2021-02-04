@@ -11,6 +11,7 @@
       <li><a href="{{ route('inventario') }}"><i class="fas fa-dolly-flatbed"></i><span>Registro inventario</span></a></li>
       <li><a href="{{ route('compra') }}"><i class="fas fa-shopping-basket"></i><span>Compras</span></a></li>
       <li><a href="{{ route('producto') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
+      <li><a href="{{ route('entregaProductos') }}"><i class="fas fa-shopping-basket"></i><span>Entrega de productos</span></a></li>
    </div>
    
   

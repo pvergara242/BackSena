@@ -33,9 +33,10 @@
         <a href="./RegistroInventario.html"><i class="fas fa-dolly-flatbed"></i><span>Registro de inventario</span></a>
         <a href="./Compras.html"><i class="fas fa-shopping-basket"></i><span>Rgistro de Compras</span></a>
         <a href="./Productos.html"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a>
+        <a href="./entregaProductos.html"><i class="fas fa-shopping-basket"></i><span>entrega de productos</span></a>
     </div>
     <!-- sidebar fin  -->
-    
+
     <div class="content"></div>
   
     

@@ -130,5 +130,28 @@ class DatabaseSeeder extends Seeder
             'PorcentajeRetefte' => '1234567754635',
             'TotalRetenciónFuente' => '1234567432',
         ]);
+        
+        // DB::table('salidaProducto')->insert([
+        //     'fechaSolicitud' => '6634355454',
+        //     'area' => 'Mercedes',
+        //     'codigoRegional' => 'Maria',
+        //     'nombreRegional' => 'Perez',
+        //     'codigoCentroCostos' => 'Trujillo',
+        //     'nombreCentroCostos' => '1',
+        //     'cordinadorArea' => 'Me llamo yo',
+        //     'numeroDocumento' => '+57',
+        //     'nombreServidorPublico' => '1',
+        //     'numeroDocumentoServidor' => '021',
+        //     'codigoFichaCaracterizacion' => 'Cll de los amores con tristezas',
+        //     'codigoSena' => '316 423 8967',
+        //     'descripcionBien' => 'cliente@cliente.com',
+        //     'unidadMedida' => 'cliente@cliente.com',
+        //     'cantidadSolicitada' => 'cliente@cliente.com',
+        //     'observaciones' => 'cliente@cliente.com',
+        //     'nombre' => 'cliente@cliente.com',
+        //     'cargo' => 'cliente@cliente.com',
+        //     'created_at' => '2020-10-09 13:42:26',
+        //     'updated_at' => '2020-10-09 13:42:32',
+        // ]);
     }
 }
