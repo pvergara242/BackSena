@@ -45,7 +45,7 @@ class ComprasController extends Controller
     public function edit($id)
     {
         $compras = Compras::find($id);
-        return view('compras.edit', compact('Compras'));
+        return view('compras.edit', compact('compra'));
     }
     public function update(Request $request, $id)
     {
@@ -76,20 +76,23 @@ class ComprasController extends Controller
         $Compras = Compras::find($id);
         $Compras->CodigoComprobante = $request->get('CodigoComprobante');
         $Compras->numeroFactura = $request->get('numeroFactura');
-        $Compras->CantidadProducto = $request->get('CantidadProducto');
         $Compras->DetalleGeneral = $request->get('DetalleGeneral');
         $Compras->FechaCompra = $request->get('FechaCompra');
         $Compras->CodigoTercero = $request->get('CodigoTercero');
         $Compras->nombreTercero = $request->get('nombreTercero');
         $Compras->codigoProducto = $request->get('codigoProducto');
+        $Compras->nombreProducto = $request->get('nombreProducto');
         $Compras->Cantidades = $request->get('Cantidades');
         $Compras->unidadesDisponibles = $request->get('unidadesDisponibles');
-        $Compras->CostoUnitarioCompra = $request->get('CostoUnitarioCompra');
+        $Compras->ReferenCostoUnitarioCompra = $request->get('ReferenCostoUnitarioCompra');
+        $Compras->CostoTotalCompra = $request->get('CostoTotalCompra');
         $Compras->Referencia = $request->get('Referencia');
         $Compras->Presentacion = $request->get('Presentacion');
         $Compras->Impuestos = $request->get('Impuestos');
         $Compras->Porcentajeimpuesto = $request->get('Porcentajeimpuesto');
+        $Compras->TotalImpuestos = $request->get('TotalImpuestos');
         $Compras->RetencionFuente = $request->get('RetencionFuente');
+        $Compras->TiempoReposicion = $request->get('TiempoReposicion');
         $Compras->PorcentajeRetefte = $request->get('PorcentajeRetefte');
         $Compras->TotalRetenciónFuente = $request->get('TotalRetenciónFuente');
         $Compras->save();

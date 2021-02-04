@@ -17,7 +17,7 @@ class Compras extends Model
         'nombreProducto', 
         'Cantidades', 
         'unidadesDisponibles', 
-        'CostoUnitarioCompra', 
+        'ReferenCostoUnitarioCompra', 
         'CostoTotalCompra', 
         'Referencia',
         'Presentacion',

@@ -15,7 +15,6 @@ class CreateProductoSalidasTable extends Migration
     {
         Schema::create('producto_salidas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('id');
             $table->string('fechaSolicitud', 20);
             $table->string('area', 120);
             $table->string('codigoRegional', 120);
@@ -36,7 +35,7 @@ class CreateProductoSalidasTable extends Migration
             $table->string('nombre', 120);
             $table->string('cargo', 120);
             $table->timestamps();
-            $table->timestamps();
+           
         });
     }
 
