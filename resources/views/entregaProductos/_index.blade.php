@@ -40,29 +40,28 @@
              @guest
                 <h3 class="text-center bg-warning p-4">No hay entregas de productos por mostrar</h3>
              @else 
-             @foreach ($EntregaProductos as $EntregaProductos)
+             @foreach ($entregaProductos as $entregaProductos)
                 <tr>
-                   <td>{{ $EntregaProductos->id }}</td>
-                   <td>{{ $EntregaProductos->fechaSolicitud }}</td>
-                   <td>{{ $EntregaProductos->area }}</td>
-                   <td>{{ $EntregaProductos->codigoRegional }}</td>
-                   <td>{{ $EntregaProductos->nombreRegional }}</td>
-                   <td>{{ $EntregaProductos->codigoCentroCostos }}</td>
-                   <td>{{ $EntregaProductos->nombreCentroCostos }}</td>
-                   <td>{{ $EntregaProductos->coordinadorArea }}</td>
-                   <td>{{ $EntregaProductos->numeroDocumento }}</td>
-                   <td>{{ $EntregaProductos->nombreServidorPublico }}</td>
-                   <td>{{ $EntregaProductos->numeroDocumentoServidor }}</td>
-                   <td>{{ $EntregaProductos->codigoFichaCaracterizacion }}</td>
-                   <td>{{ $EntregaProductos->codigoSena }}</td>
-                   <td>{{ $EntregaProductos->descripcionBien }}</td>
-                   <td>{{ $EntregaProductos->unidadMedida }}</td>
-                   <td>{{ $EntregaProductos->cantidadSolicitada }}</td>
-                   <td>{{ $EntregaProductos->cantidadEntregada }}</td>
-                   <td>{{ $EntregaProductos->observaciones }}</td>
-                   <td>{{ $EntregaProductos->nombre }}</td>
-                   <td>{{ $EntregaProductos->cargo }}</td>
-
+                   <td>{{ $entregaProductos->id }}</td>
+                   <td>{{ $entregaProductos->fechaSolicitud }}</td>
+                   <td>{{ $entregaProductos->area }}</td>
+                   <td>{{ $entregaProductos->codigoRegional }}</td>
+                   <td>{{ $entregaProductos->nombreRegional }}</td>
+                   <td>{{ $entregaProductos->codigoCentroCostos }}</td>
+                   <td>{{ $entregaProductos->nombreCentroCostos }}</td>
+                   <td>{{ $entregaProductos->coordinadorArea }}</td>
+                   <td>{{ $entregaProductos->numeroDocumento }}</td>
+                   <td>{{ $entregaProductos->nombreServidorPublico }}</td>
+                   <td>{{ $entregaProductos->numeroDocumentoServidor }}</td>
+                   <td>{{ $entregaProductos->codigoFichaCaracterizacion }}</td>
+                   <td>{{ $entregaProductos->codigoSena }}</td>
+                   <td>{{ $entregaProductos->descripcionBien }}</td>
+                   <td>{{ $entregaProductos->unidadMedida }}</td>
+                   <td>{{ $entregaProductos->cantidadSolicitada }}</td>
+                   <td>{{ $entregaProductos->cantidadEntregada }}</td>
+                   <td>{{ $entregaProductos->observaciones }}</td>
+                   <td>{{ $entregaProductos->nombre }}</td>
+                   <td>{{ $entregaProductos->cargo }}</td>e
                    <td>
                       <div class="accions">
  
@@ -83,7 +82,7 @@
           </tbody>
        </table>
     </div>
-       <div class="pagination">{{ $products->links() }}</div>
+       <div class="pagination">{{ $EntregaProductos->links() }}</div>
  </div>
  
  

@@ -15,7 +15,7 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">Editar producto</h1>
+            <h1 class="text-center">Editar entrega de producto</h1>
 
             @include('entregaProductos._form-edit')
 
