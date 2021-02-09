@@ -82,7 +82,7 @@
           </tbody>
        </table>
     </div>
-       <div class="pagination">{{ $EntregaProductos->links() }}</div>
+       <div class="pagination">{{ $entregaProductos->links() }}</div>
  </div>
  
  

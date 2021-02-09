@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ProductoSalida;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductoSalidaRequest;
 
 class ProductoSalidaController extends Controller
 {
@@ -12,10 +14,11 @@ class ProductoSalidaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   
     public function index()
     {
-        return view('entregaProductos.index');
-        
+        $entregaProductos = ProductoSalida::latest()->paginate(4);
+        return view('entregaProductos.index', compact('entregaProductos') );
     }
 
     /**
@@ -26,7 +29,7 @@ class ProductoSalidaController extends Controller
     public function create()
     {
         return view('entregaProductos.create', [
-            'entregaProductos' => new EntregaProduct
+            'entregaProductos' => new ProductoSalida
         ]);
     }
 
@@ -36,10 +39,10 @@ class ProductoSalidaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SalidaProductoCreateRequest $request)
     {
-        EntregaProduct::create($request->validated() );
-        return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
+        ProductoSalida::create($request->validated() );
+        return redirect()->route('entregaProductos')->with('success', 'la entrega del producto ha sido entregado satisfactoriamente ');
     }
 
     /**
@@ -51,7 +54,7 @@ class ProductoSalidaController extends Controller
     public function show(ProductoSalida $productoSalida)
     {
         return view('entregaProductos.show', [
-            'entregaProductos' => EntregaProduct::findOrFail($id)
+            'entregaProductos' => ProductoSalida::findOrFail($id)
         ]);
     }
 
@@ -63,7 +66,7 @@ class ProductoSalidaController extends Controller
      */
     public function edit(ProductoSalida $productoSalida)
     {
-        $entregaProductos = EntregaProduct::find($id);
+        $entregaProductos = ProductoSalida::find($id);
         return view('entregaProductos.edit', compact('entregaProductos'));
     }
 
@@ -98,27 +101,27 @@ class ProductoSalidaController extends Controller
             'cargo' => 'required',
 
         ]);
-        $EntregaProductos = EntregaProduct::find($id);
-        $EntregaProductos->fechaSolicitud = $request->get('fechaSolicitud');
-        $EntregaProductos->area = $request->get('area');
-        $EntregaProductos->codigoRegional = $request->get('codigoRegional');
-        $EntregaProductos->nombreRegional = $request->get('nombreRegional');
-        $EntregaProductos->codigoCentroCostos = $request->get('codigoCentroCostos ');
-        $EntregaProductos->nombreCentroCostos = $request->get('nombreCentroCostos');
-        $EntregaProductos->cordinadorArea = $request->get('cordinadorArea');
-        $EntregaProductos->numeroDocumento = $request->get('numeroDocumento');
-        $EntregaProductos->nombreServidorPublico = $request->get('nombreServidorPublico');
-        $EntregaProductos->numeroDocumentoServidor = $request->get('numeroDocumentoServidor');
-        $EntregaProductos->codigoFichaCaracterizacion = $request->get('codigoFichaCaracterizacion');
-        $EntregaProductos->codigoSena = $request->get('codigoSena');
-        $EntregaProductos->descripcionBien = $request->get('descripcionBien');
-        $EntregaProductos->unidadMedida = $request->get('unidadMedida');
-        $EntregaProductos->cantidadSolicitada = $request->get('cantidadSolicitada');
-        $EntregaProductos->observaciones = $request->get('observaciones');
-        $EntregaProductos->nombre = $request->get('nombre');
-        $EntregaProductos->cargo = $request->get('cargo');
+        $productoSalida = ProductoSalida::find($id);
+        $productoSalida->fechaSolicitud = $request->get('fechaSolicitud');
+        $productoSalida->area = $request->get('area');
+        $productoSalida->codigoRegional = $request->get('codigoRegional');
+        $productoSalida->nombreRegional = $request->get('nombreRegional');
+        $productoSalida->codigoCentroCostos = $request->get('codigoCentroCostos ');
+        $productoSalida->nombreCentroCostos = $request->get('nombreCentroCostos');
+        $productoSalida->cordinadorArea = $request->get('cordinadorArea');
+        $productoSalida->numeroDocumento = $request->get('numeroDocumento');
+        $productoSalida->nombreServidorPublico = $request->get('nombreServidorPublico');
+        $productoSalida->numeroDocumentoServidor = $request->get('numeroDocumentoServidor');
+        $productoSalida->codigoFichaCaracterizacion = $request->get('codigoFichaCaracterizacion');
+        $productoSalida->codigoSena = $request->get('codigoSena');
+        $productoSalida->descripcionBien = $request->get('descripcionBien');
+        $productoSalida->unidadMedida = $request->get('unidadMedida');
+        $productoSalida->cantidadSolicitada = $request->get('cantidadSolicitada');
+        $productoSalida->observaciones = $request->get('observaciones');
+        $productoSalida->nombre = $request->get('nombre');
+        $productoSalida->cargo = $request->get('cargo');
 
-        $EntregaProductos->save();
+        $productoSalida->save();
 
         return redirect()->route('entregaProductos')->with('primary', 'La entrega del producto fue actualizada exitosamente.');
     }
@@ -131,8 +134,8 @@ class ProductoSalidaController extends Controller
      */
     public function destroy(ProductoSalida $productoSalida)
     {
-        $EntregaProductos = EntregaProduct::find($id);
-        $EntregaProductos->delete();
+        $productoSalida = ProductoSalida::find($id);
+        $productoSalida->delete();
 
         return redirect()->route('entregaProductos')->with('danger', 'La entrega del producto ha sido eliminada correctamente.');
     }

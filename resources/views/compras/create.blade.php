@@ -21,7 +21,7 @@
             @include('partials.sessions_status')
             @include('compras._form-create')
 
-         </main>
+         </main>  
 
       </section>
 

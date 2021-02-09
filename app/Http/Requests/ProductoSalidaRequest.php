@@ -4,13 +4,23 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EntregaProductosRequest extends FormRequest
+class ProductoSalidaRequest extends FormRequest
 {
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
     public function rules()
     {
         return [
@@ -33,7 +43,6 @@ class EntregaProductosRequest extends FormRequest
             'observaciones'                 => ['required', 'min:7', 'max:120' ],
             'nombre'                        => ['required', 'min:7', 'max:120' ],
             'cargo'                         => ['required', 'min:7', 'max:120' ],
-            
         ];
     }
 }
