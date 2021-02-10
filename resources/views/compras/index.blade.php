@@ -19,7 +19,6 @@
         <main class="ctnBody">
           <h1 class="text-center">LISTA DE COMPRAS</h1>
 
-          @include('compras._index')
 
         </main>
 
