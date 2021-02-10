@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EntregaProductosRequest;
 use App\ProductoSalida;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class ProductoSalidaController extends Controller
     public function create()
     {
         return view('entregaProductos.create', [
-            'entregaProductos' => new EntregaProduct
+            'entregaProductos' => new EntregaProductosRequest()
         ]);
     }
 
@@ -38,7 +39,7 @@ class ProductoSalidaController extends Controller
      */
     public function store(Request $request)
     {
-        EntregaProduct::create($request->validated() );
+        EntregaProductosRequest::create($request->validated() );
         return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
     }
 
@@ -51,7 +52,7 @@ class ProductoSalidaController extends Controller
     public function show(ProductoSalida $productoSalida)
     {
         return view('entregaProductos.show', [
-            'entregaProductos' => EntregaProduct::findOrFail($id)
+            'entregaProductos' => EntregaProductosRequest::findOrFail($id)
         ]);
     }
 
@@ -63,7 +64,7 @@ class ProductoSalidaController extends Controller
      */
     public function edit(ProductoSalida $productoSalida)
     {
-        $entregaProductos = EntregaProduct::find($id);
+        $entregaProductos = EntregaProductosRequest::find($id);
         return view('entregaProductos.edit', compact('entregaProductos'));
     }
 
@@ -98,7 +99,7 @@ class ProductoSalidaController extends Controller
             'cargo' => 'required',
 
         ]);
-        $EntregaProductos = EntregaProduct::find($id);
+        $EntregaProductos = EntregaProductosRequest::find($id);
         $EntregaProductos->fechaSolicitud = $request->get('fechaSolicitud');
         $EntregaProductos->area = $request->get('area');
         $EntregaProductos->codigoRegional = $request->get('codigoRegional');
@@ -131,7 +132,7 @@ class ProductoSalidaController extends Controller
      */
     public function destroy(ProductoSalida $productoSalida)
     {
-        $EntregaProductos = EntregaProduct::find($id);
+        $EntregaProductos = EntregaProductosRequest::find($id);
         $EntregaProductos->delete();
 
         return redirect()->route('entregaProductos')->with('danger', 'La entrega del producto ha sido eliminada correctamente.');
