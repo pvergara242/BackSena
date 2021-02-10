@@ -19,6 +19,7 @@ class ComprasController extends Controller
 
     public function index()
     {
+        return view('compras.index');
         $compras = Compras::latest()->paginate(6);
         return view('compras.index', compact('compras') );
     }

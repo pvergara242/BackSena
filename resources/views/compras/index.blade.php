@@ -1,5 +1,5 @@
 
-  
+
 @extends('layouts.panel')
 
 
@@ -7,11 +7,11 @@
   <div class="childDashboard">
 
     <section class="navSuperior">
-      @include('components/navSuperior')        
+      @include('components/navSuperior')
     </section>
-          
+
     <section class="DashboardBody">
-        
+
         <div class=" sidebar">
           @include('components.sidebar')
         </div>
@@ -24,7 +24,7 @@
 
     </section>
 
-  </div>   
+  </div>
 
 </main>
 
