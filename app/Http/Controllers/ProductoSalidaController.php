@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EntregaProductosRequest;
 use App\ProductoSalida;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class ProductoSalidaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
+
     public function index()
     {
         $entregaProductos = ProductoSalida::latest()->paginate(4);
@@ -80,25 +81,25 @@ class ProductoSalidaController extends Controller
     public function update(Request $request, ProductoSalida $productoSalida)
     {
         $request->validate([
-            'fechaSolicitud' => 'required',
-            'area'  => 'required',
-            'codigoRegional' => 'required',
-            'nombreRegional' => 'required',
-            'codigoCentroCostos' => 'required',
-            'nombreCentroCostos' => 'required',
-            'cordinadorArea' => 'required',
-            'numeroDocumento' => 'required',
-            'nombreServidorPublico' => 'required',
-            'numeroDocumentoServidor' => 'required',
-            'codigoFichaCaracterizacion' => 'required',
-            'codigoSena' => 'required',
-            'descripcionBien' => 'required',
-            'unidadMedida' => 'required',
-            'cantidadSolicitada' => 'required',
-            'cantidadEntregada' => 'required',
-            'observaciones' => 'required',
-            'nombre' => 'required',
-            'cargo' => 'required',
+                'fechaSolicitud' => 'required',
+                'area'  => 'required',
+                'codigoRegional' => 'required',
+                'nombreRegional' => 'required',
+                'codigoCentroCostos' => 'required',
+                'nombreCentroCostos' => 'required',
+                'cordinadorArea' => 'required',
+                'numeroDocumento' => 'required',
+                'nombreServidorPublico' => 'required',
+                'numeroDocumentoServidor' => 'required',
+                'codigoFichaCaracterizacion' => 'required',
+                'codigoSena' => 'required',
+                'descripcionBien' => 'required',
+                'unidadMedida' => 'required',
+                'cantidadSolicitada' => 'required',
+                'cantidadEntregada' => 'required',
+                'observaciones' => 'required',
+                'nombre' => 'required',
+                'cargo' => 'required',
 
         ]);
         $productoSalida = ProductoSalida::find($id);
