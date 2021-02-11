@@ -1,120 +1,90 @@
+
+  
+
 <div class="modelPage">
    @include('partials.sessions_status')
    <div class="text-right py-2">
-      <a class="btn btn-success" href="{{ route('entregaProductos.create') }}"> Entregar Producto</a>
+      <a class="btn btn-success" href="{{ route('entregaProductos.create') }}"> Agrega Entrega de  Producto</a>
    </div>
 
    <div class="tableBody">
       <table id="entregaProductos" class="table table-secondary table-striped table-hover table-bordered">
          <thead class="">
-               <tr class="text-center border border-dander">
-                  <th class="">ID</th>
-                  <th class="">fechaSolicitud</th>
-                  <th class="">area</th>
-                  <th class="">codigoRegional</th>
-                  <th class="">nombreRegional</th>
-                  <th class="">codigoCentroCostos</th>
-                  <th class="">nombreCentroCostos</th>
-                  <th class="">coordinadorArea</th>
-                  <th class="">numeroDocumento</th>
-                  <th class="">nombreServidorPublico</th>
-                  <th class="">numeroDocumentoServidor</th>
-                  <th class="">codigoFichaCaracterizacion</th>
-                  <th class="">codigoSena</th>
-                  <th class="">descripcionBien</th>
-                  <th class="">unidadMedida</th>
-                  <th class="">cantidadSolicitada</th>
-                  <th class="">cantidadEntregada</th>
-                  <th class="">observaciones</th>
-                  <th class="">nombre</th>
-                  <th class="">cargo</th>
-
-                  <th class="">Acciones</th>
-               </tr>
-         </thead>
-
-         <tbody class="tableFilas">
-               @guest
-                  <h3 class="text-center bg-warning p-4">No hay entregas de productos por mostrar</h3>
-               @else
-                  @foreach ($entregaProductos as $entregaProductos)
-                     <tr>
-                           <td>{{ $entregaProductos->id }}</td>
-                           <td>{{ $entregaProductos->fechaSolicitud }}</td>
-                           <td>{{ $entregaProductos->area }}</td>
-                           <td>{{ $entregaProductos->codigoRegional }}</td>
-                           <td>{{ $entregaProductos->nombreRegional }}</td>
-                           <td>{{ $entregaProductos->codigoCentroCostos }}</td>
-                           <td>{{ $entregaProductos->nombreCentroCostos }}</td>
-                           <td>{{ $entregaProductos->coordinadorArea }}</td>
-                           <td>{{ $entregaProductos->numeroDocumento }}</td>
-                           <td>{{ $entregaProductos->nombreServidorPublico }}</td>
-                           <td>{{ $entregaProductos->numeroDocumentoServidor }}</td>
-                           <td>{{ $entregaProductos->codigoFichaCaracterizacion }}</td>
-                           <td>{{ $entregaProductos->codigoSena }}</td>
-                           <td>{{ $entregaProductos->descripcionBien }}</td>
-                           <td>{{ $entregaProductos->unidadMedida }}</td>
-                           <td>{{ $entregaProductos->cantidadSolicitada }}</td>
-                           <td>{{ $entregaProductos->cantidadEntregada }}</td>
-                           <td>{{ $entregaProductos->observaciones }}</td>
-                           <td>{{ $entregaProductos->nombre }}</td>
-                           <td>{{ $entregaProductos->cargo }}</td>e
-                           <td>
-                              <div class="accions">
-
-                                 <a class="btn btn-primary"
-                                       href="{{ route('entregaProductos.edit', $EntregaProductos->id) }}"><i
-                                          class="fas fa-user-edit">&nbsp;</i> </a>
-
-                                 <form class="btnDelete"
-                                       action="{{ route('entregaProductos.destroy', $EntregaProductos->id) }}"
-                                       method="POST">
-                                       @csrf
-                                       @method('DELETE')
-                                       <button type="submit"><i class="fas fa-trash-alt"></i></button>
-                                 </form>
-                              </div>
-
-                           </td>
-                     </tr>
-                  @endforeach
-
+            <tr class="text-center border border-dander">
+               <th class="">ID</th>
+               <th class="">CodigoProducto</th>
+               <th class="">nombreProducto</th>
+               <th class="">CantidadProducto</th>
+               <th class="">consumo</th>
+               <th class="">MercanciaVenta</th>
+               <th class="">produccionInterna</th>
+               <th class="">ManejaLotes</th>
+               <th class="">esServicio</th>
+               <th class="">productoActivo</th>
+               <th class="">DatosFabricante</th>
+               <th class="">Medidas</th>
+               <th class="">UbicacionFisica</th>
+               <th class="">Referencia</th>
+               <th class="">Presentacion</th>
+               <th class="">ProductoEquivalente</th>
+               <th class="">StockMinimo</th>
+               <th class="">StockMaximo</th>
+               <th class="">TiempoReposicion</th>
+               <th class="">CuentaInventarios</th>
+               <th class="">CuentaContableIngreso</th>
+               <th class="">CuentaContableIngresoAjuste</th>
+               <th class="">DevolucionVentas</th>
+               <th class="">DevolucionCompras</th>
+               <th class="">CuentaContableGasto</th>
+               <th class="">CuentaContableGastoAjuste</th>
+               <th class="">ImpuestoCompras</th>
+               <th class="">ImpuestoVentas</th>
                <th class="">Acciones</th>
             </tr>
          </thead>
-
+   
          <tbody class="tableFilas">
             @guest
-               <h3 class="text-center bg-warning p-4">No hay entregas de productos por mostrar</h3>
-            @else
+               <h3 class="text-center bg-warning p-4">No existen productos para mostrar</h3>
+            @else 
             @foreach ($entregaProductos as $entregaProductos)
                <tr>
                   <td>{{ $entregaProductos->id }}</td>
-                  <td>{{ $entregaProductos->fechaSolicitud }}</td>
-                  <td>{{ $entregaProductos->area }}</td>
-                  <td>{{ $entregaProductos->codigoRegional }}</td>
-                  <td>{{ $entregaProductos->nombreRegional }}</td>
-                  <td>{{ $entregaProductos->codigoCentroCostos }}</td>
-                  <td>{{ $entregaProductos->nombreCentroCostos }}</td>
-                  <td>{{ $entregaProductos->coordinadorArea }}</td>
-                  <td>{{ $entregaProductos->numeroDocumento }}</td>
-                  <td>{{ $entregaProductos->nombreServidorPublico }}</td>
-                  <td>{{ $entregaProductos->numeroDocumentoServidor }}</td>
-                  <td>{{ $entregaProductos->codigoFichaCaracterizacion }}</td>
-                  <td>{{ $entregaProductos->codigoSena }}</td>
-                  <td>{{ $entregaProductos->descripcionBien }}</td>
-                  <td>{{ $entregaProductos->unidadMedida }}</td>
-                  <td>{{ $entregaProductos->cantidadSolicitada }}</td>
-                  <td>{{ $entregaProductos->cantidadEntregada }}</td>
-                  <td>{{ $entregaProductos->observaciones }}</td>
-                  <td>{{ $entregaProductos->nombre }}</td>
-                  <td>{{ $entregaProductos->cargo }}</td>e
+                  <td>{{ $entregaProductos->CodigoProducto }}</td>
+                  <td>{{ $entregaProductos->nombreProducto }}</td>
+                  <td>{{ $entregaProductos->CantidadProducto }}</td>
+                  <td>{{ $entregaProductos->consumo }}</td>
+                  <td>{{ $entregaProductos->MercanciaVenta }}</td>
+                  <td>{{ $entregaProductos->produccionInterna }}</td>
+                  <td>{{ $entregaProductos->ManejaLotes }}</td>
+                  <td>{{ $entregaProductos->esServicio }}</td>
+                  <td>{{ $entregaProductos->productoActivo }}</td>
+                  <td>{{ $entregaProductos->DatosFabricante }}</td>
+                  <td>{{ $entregaProductos->Medidas }}</td>
+                  <td>{{ $entregaProductos->UbicacionFisica }}</td>
+                  <td>{{ $entregaProductos->Referencia }}</td>
+                  <td>{{ $entregaProductos->Presentacion }}</td>
+                  <td>{{ $entregaProductos->ProductoEquivalente }}</td>
+                  <td>{{ $entregaProductos->StockMinimo }}</td>
+                  <td>{{ $entregaProductos->StockMaximo }}</td>
+                  <td>{{ $entregaProductos->TiempoReposicion }}</td>
+                  <td>{{ $entregaProductos->CuentaInventarios }}</td>
+                  <td>{{ $entregaProductos->CuentaContableIngreso }}</td>
+                  <td>{{ $entregaProductos->CuentaContableIngresoAjuste }}</td>
+                  <td>{{ $entregaProductos->DevolucionVentas }}</td>
+                  <td>{{ $entregaProductos->DevolucionCompras }}</td>
+                  <td>{{ $entregaProductos->CuentaContableGasto }}</td>
+                  <td>{{ $entregaProductos->CuentaContableGastoAjuste }}</td>
+                  <td>{{ $entregaProductos->ImpuestoCompras }}</td>
+                  <td>{{ $entregaProductos->ImpuestoVentas }}</td>
+              
+                  
                   <td>
                      <div class="accions">
 
-                        <a class="btn btn-primary" href="{{ route('entregaProductos.edit', $EntregaProductos->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
-
-                        <form class="btnDelete" action="{{ route('entregaProductos.destroy', $EntregaProductos->id) }}" method="POST">
+                        <a class="btn btn-primary" href="{{ route('entregaProductos.edit', $entregaProductos->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
+                        
+                        <form class="btnDelete" action="{{ route('entregaProductos.destroy', $entregaProductos->id) }}" method="POST">
                            @csrf
                            @method('DELETE')
                            <button type="submit"><i class="fas fa-trash-alt"></i></button>
@@ -122,14 +92,13 @@
                      </div>
 
                   </td>
-               </tr>
+               </tr>             
             @endforeach
-
+   
             @endguest
          </tbody>
       </table>
    </div>
       <div class="pagination">{{ $entregaProductos->links() }}</div>
 </div>
-
 

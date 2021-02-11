@@ -40,7 +40,7 @@ class ProductoSalidaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SalidaProductoCreateRequest $request)
+    public function store(ProductoSalidaRequest $request)
     {
         ProductoSalida::create($request->validated() );
         return redirect()->route('entregaProductos')->with('success', 'la entrega del producto ha sido entregado satisfactoriamente ');
