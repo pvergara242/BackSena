@@ -10,23 +10,12 @@ use App\Http\Requests\ProductoSalidaRequest;
 
 class ProductoSalidaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function index()
     {
         $entregaProductos = ProductoSalida::latest()->paginate(4);
         return view('entregaProductos.index', compact('entregaProductos') );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('entregaProductos.create', [
@@ -34,24 +23,14 @@ class ProductoSalidaController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(ProductoSalidaRequest $request)
     {
         ProductoSalida::create($request->validated() );
-        return redirect()->route('entregaProductos')->with('success', 'la entrega del producto ha sido entregado satisfactoriamente ');
+        return redirect()->route('entregaProductos')->with('success', 'El producto ha sido agregado satisfactoriamente ');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\ProductoSalida  $productoSalida
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show(ProductoSalida $productoSalida)
     {
         return view('entregaProductos.show', [
@@ -59,25 +38,13 @@ class ProductoSalidaController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\ProductoSalida  $productoSalida
-     * @return \Illuminate\Http\Response
-     */
+   
     public function edit(ProductoSalida $productoSalida)
     {
         $entregaProductos = ProductoSalida::find($id);
         return view('entregaProductos.edit', compact('entregaProductos'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ProductoSalida  $productoSalida
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, ProductoSalida $productoSalida)
     {
         $request->validate([
@@ -127,12 +94,6 @@ class ProductoSalidaController extends Controller
         return redirect()->route('entregaProductos')->with('primary', 'La entrega del producto fue actualizada exitosamente.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\ProductoSalida  $productoSalida
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(ProductoSalida $productoSalida)
     {
         $productoSalida = ProductoSalida::find($id);
