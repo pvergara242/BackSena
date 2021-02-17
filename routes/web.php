@@ -11,6 +11,7 @@ Route::get('ventas', 'VentasController@index')->name('ventas')->middleware('auth
 Route::get('inventario', 'InventarioController@index')->name('inventario')->middleware('auth');
 Route::get('compras', 'ComprasController@index')->name('compras')->middleware('auth');
 Route::get('entregaProductos', 'EntregaProductController@index')->name('entregaProductos')->middleware('auth');
+Route::get('pedidoProductos', 'PedidoProductController@index')->name('pedidoProductos')->middleware('auth');
 
 Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
     Route::get('/', 'ClientController@index')->name('cliente'); 
@@ -21,7 +22,6 @@ Route::group(['prefix' => 'clientes', 'middleware' =>  ['auth']], function() {
     Route::patch('/{cliente}', 'ClientController@update')->name('cliente.update');
     Route::delete('/{cliente}', 'ClientController@destroy')->name('cliente.destroy');
 });
-    
 
 Route::group(['prefix' => 'productos', 'middleware' =>  ['auth']], function() {
     Route::get('/', 'ProductController@index')->name('producto'); 
@@ -44,7 +44,6 @@ Route::group(['prefix' => 'compras', 'middleware' =>  ['auth']], function() {
 });
 
 Route::group(['prefix' => 'entregaProductos', 'middleware' =>  ['auth']], function() {
-<<<<<<< HEAD
     Route::get('/', 'EntregaProductController@index')->name('entregaProducto'); 
     Route::get('/create', 'EntregaProductController@create')->name('entregaProductos.create');
     Route::get('/{entregaProductos}', 'EntregaProductController@show')->name('entregaProductos.show');
@@ -52,13 +51,14 @@ Route::group(['prefix' => 'entregaProductos', 'middleware' =>  ['auth']], functi
     Route::get('/{entregaProductos}/edit', 'EntregaProductController@edit')->name('entregaProductos.edit');
     Route::patch('/{entregaProductos}', 'EntregaProductController@update')->name('entregaProductos.update');
     Route::delete('/{entregaProductos}', 'EntregaProductController@destroy')->name('entregaProductos.destroy');
-=======
-    Route::get('/', 'ProductoSalidaController@index')->name('entregaProductos'); 
-    Route::get('/create', 'ProductoSalidaController@create')->name('entregaProductos.create');
-    Route::get('/{entregaProductos}', 'ProductoSalidaController@show')->name('entregaProductos.show');
-    Route::post('/', 'ProductoSalidaController@store')->name('entregaProductos.store');
-    Route::get('/{entregaProductos}/edit', 'ProductoSalidaController@edit')->name('entregaProductos.edit');
-    Route::patch('/{entregaProductos}', 'ProductoSalidaController@update')->name('entregaProductos.update');
-    Route::delete('/{entregaProductos}', 'ProductoSalidaController@destroy')->name('entregaProductos.destroy');
->>>>>>> cd8895cf56cd20f9d010c6df0e32c8c9cb8bbebc
+});
+
+Route::group(['prefix' => 'pedidoProductos', 'middleware' =>  ['auth']], function() {
+    Route::get('/', 'PedidoProductController@index')->name('pedidoProducto'); 
+    Route::get('/create', 'PedidoProductController@create')->name('pedidoProductos.create');
+    Route::get('/{pedidoProductos}', 'PedidoProductController@show')->name('pedidoProductos.show');
+    Route::post('/', 'PedidoProductController@store')->name('pedidoProductos.store');
+    Route::get('/{pedidoProductos}/edit', 'PedidoProductController@edit')->name('pedidoProductos.edit');
+    Route::patch('/{pedidoProductos}', 'PedidoProductController@update')->name('pedidoProductos.update');
+    Route::delete('/{pedidoProductos}', 'PedidoProductController@destroy')->name('pedidoProductos.destroy');
 });
