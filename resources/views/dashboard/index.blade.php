@@ -7,6 +7,7 @@
     <section class="navSuperior">
       @include('components/navSuperior')        
     </section>
+    
           
     <section class="DashboardBody">
         
