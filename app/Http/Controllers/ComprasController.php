@@ -19,33 +19,34 @@ class ComprasController extends Controller
 
     public function index()
     {
+        return view('compras.index');
         $compras = Compras::latest()->paginate(6);
-        return view('compras.index', compact('compras') );
+        return view('compra.index', compact('compras') );
     }
 
     public function create()
     {
-        return view('compras.create', [
-            'Compras' => new Compras
+        return view('compra.create', [
+            'compras' => new Compras
         ]);
     }
 
     public function store(ComprasRequest $request)
     {
         Compras::create($request->validated() );
-        return redirect()->route('compras')->with('success', 'La compra ha sido agregado satisfactoriamente ');
+        return redirect()->route('compra')->with('success', 'La compra ha sido agregado satisfactoriamente ');
     }
 
     public function show($id)
     {
-        return view('compras.show', [
+        return view('compra.show', [
             'Compras' => Compras::findOrFail($id)
         ]);
     }
     public function edit($id)
     {
-        $compras = Compras::find($id);
-        return view('compras.edit', compact('compra'));
+        $Compras = Compras::find($id);
+        return view('compra.edit', compact('Compras'));
     }
     public function update(Request $request, $id)
     {
