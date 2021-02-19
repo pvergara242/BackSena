@@ -17,7 +17,7 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">ENTREGA DE PRODUCTO</h1>
+            <h1 class="text-center">REGISTRO ENTREGA DE PRODUCTO</h1>
             @include('partials.sessions_status')
             @include('entregaProductos._form-create')
 
