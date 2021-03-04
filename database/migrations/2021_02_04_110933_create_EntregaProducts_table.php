@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductoSalidasTable extends Migration
+class CreateEntregaProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProductoSalidasTable extends Migration
      */
     public function up()
     {
-        Schema::create('producto_salidas', function (Blueprint $table) {
+        Schema::create('EntregaProducts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('fechaSolicitud', 20);
             $table->string('area', 120);
@@ -38,6 +38,7 @@ class CreateProductoSalidasTable extends Migration
            
         });
     }
+ 
 
     /**
      * Reverse the migrations.
@@ -46,6 +47,6 @@ class CreateProductoSalidasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producto_salidas');
+        Schema::dropIfExists('EntregaProducts');
     }
 }

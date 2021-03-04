@@ -131,7 +131,7 @@ class DatabaseSeeder extends Seeder
             'TotalRetenciónFuente' => '1234567432',
         ]);
         
-        DB::table('salidaProducto')->insert([
+        DB::table('EntregaProducts')->insert([
             'fechaSolicitud' => '6634355454',
             'area' => 'Mercedes',
             'codigoRegional' => 'Maria',

@@ -19,9 +19,9 @@ class EntregaProductController extends Controller
 
     public function index()
     {
-        // $entregaProductos = EntregaProducts::latest()->paginate(6);
-        // return view('entregaProductos.index', compact('entregaProductos') );
-        return "hola";
+        $entregaProductos = EntregaProducts::latest()->paginate(6);
+        return view('entregaProductos.index', compact('entregaProductos') );
+        
     }
 
     public function create()
@@ -31,7 +31,7 @@ class EntregaProductController extends Controller
         ]);
     }
 
-    public function store(EntregaProductosRequest $request)
+    public function store(EntregaProductsRequest $request)
     {
         EntregaProducts::create($request->validated() );
         return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
