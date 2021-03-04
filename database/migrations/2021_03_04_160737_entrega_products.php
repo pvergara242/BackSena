@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductoSalidasTable extends Migration
+class EntregaProducts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,20 @@ class CreateProductoSalidasTable extends Migration
      */
     public function up()
     {
-        Schema::create('producto_salidas', function (Blueprint $table) {
+        Schema::create('EntregaProductos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('fechaSolicitud', 20);
             $table->string('area', 120);
             $table->string('codigoRegional', 120);
-            $table->date('nombreRegional', 120);
-            $table->string('codigoCentroCostos', 120);
+            $table->date('codigoCentroCostos', 120);
             $table->string('nombreCentroCostos', 120);
-            $table->string('cordinadorArea', 200);
-            $table->string('numeroDocumento', 20);
+            $table->string('cordinadorArea', 120);
+            $table->string('numeroDocumento', 200);
             $table->string('nombreServidorPublico', 20);
-            $table->string('numeroDocumentoServidor', 20);
-            $table->string('codigoFichaCaracterizacion', 180);
+            $table->string('CantcodigoFichaCaracterizacionidades', 20);
             $table->string('codigoSena', 20);
-            $table->string('descripcionBien', 120);
-            $table->string('unidadMedida', 120);
+            $table->string('descripcionBien', 180);
+            $table->string('unidadMedida', 20);
             $table->string('cantidadSolicitada', 120);
             $table->string('cantidadEntregada', 120);
             $table->string('observaciones', 120);
@@ -45,6 +43,8 @@ class CreateProductoSalidasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producto_salidas');
+        Schema::dropIfExists('EntregaProducts');
     }
 }
+
+

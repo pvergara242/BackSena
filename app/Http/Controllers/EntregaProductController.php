@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\EntregaProducts;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Http\Requests\EntregaProductosRequest;
+use App\Http\Requests\EntregaProductsRequest;
 
 class EntregaProductController extends Controller
 {
@@ -19,19 +19,18 @@ class EntregaProductController extends Controller
 
     public function index()
     {
-        // $entregaProductos = EntregaProducts::latest()->paginate(6);
-        // return view('entregaProductos.index', compact('entregaProductos') );
-        return "hola";
+        $entregaProductos = EntregaProducts::latest()->paginate(6);
+        return view('entregaProductos.index', compact('entregaProductos') );
     }
 
     public function create()
     {
         return view('entregaProductos.create', [
-            'entregaProductos' => new EntregaProducts
+            'entregaProductos' => new EntregaProduct
         ]);
     }
 
-    public function store(EntregaProductosRequest $request)
+    public function store(EntregaProductsRequest $request)
     {
         EntregaProducts::create($request->validated() );
         return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
@@ -40,7 +39,7 @@ class EntregaProductController extends Controller
     public function show($id)
     {
         return view('entregaProductos.show', [
-            'entregaProductos' => EntregaProducts::findOrFail($id)
+            'entregaProductos' => EntregaProductos::findOrFail($id)
         ]);
     }
     public function edit($id)
