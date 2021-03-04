@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class EntregaProducts extends Model
 {
     protected $fillable = [
-        'fechaSolicitud', 
-        'area', 
+        'fechaSolicitud',
+        'area',
         'codigoRegional',
         'nombreRegional',
         'codigoCentroCostos',
@@ -26,6 +26,6 @@ class EntregaProducts extends Model
         'observaciones',
         'nombre',
         'cargo',
-        
+
     ];
-}   
+}
