@@ -26,6 +26,5 @@ class EntregaProducts extends Model
         'observaciones',
         'nombre',
         'cargo',
-
     ];
 }

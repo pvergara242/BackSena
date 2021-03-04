@@ -35,7 +35,6 @@ class CreateProductoSalidasTable extends Migration
             $table->string('nombre', 120);
             $table->string('cargo', 120);
             $table->timestamps();
-           
         });
     }
 
