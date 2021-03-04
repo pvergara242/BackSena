@@ -7,17 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class EntregaProducts extends Model
 {
     protected $fillable = [
-        'fechaSolicitud', 
-        'area', 
+        'fechaSolicitud',
+        'area',
         'codigoRegional',
-        'nombreRegional',
         'codigoCentroCostos',
         'nombreCentroCostos',
         'cordinadorArea',
         'numeroDocumento',
         'nombreServidorPublico',
-        'numeroDocumentoServidor',
-        'codigoFichaCaracterizacion',
+        'CantcodigoFichaCaracterizacionidades',
         'codigoSena',
         'descripcionBien',
         'unidadMedida',
@@ -26,6 +24,5 @@ class EntregaProducts extends Model
         'observaciones',
         'nombre',
         'cargo',
-        
     ];
-}   
+}
