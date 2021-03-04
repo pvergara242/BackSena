@@ -1,5 +1,3 @@
-
-  
 @extends('layouts.panel')
 
 
@@ -17,11 +15,11 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">REGISTRO DE COMPRA</h1>
-            @include('partials.sessions_status')
-            @include('compras._form-create')
+            <h1 class="text-center">Editar Pedido</h1>
 
-         </main>  
+            @include('pedidoProductos._form-edit')
+
+         </main>
 
       </section>
 
@@ -32,5 +30,3 @@
 <main class="footer">
    @include('components.footer')
 </main>
-
-

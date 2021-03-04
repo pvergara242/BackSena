@@ -17,11 +17,11 @@
          </div>
 
          <main class="ctnBody">
-            <h1 class="text-center">REGISTRO DE COMPRA</h1>
+            <h1 class="text-center">SOLICITUD DE PRODUCTOS</h1>
             @include('partials.sessions_status')
-            @include('compras._form-create')
+            @include('pedidoProductos._form-create')
 
-         </main>  
+         </main>
 
       </section>
 
@@ -32,5 +32,4 @@
 <main class="footer">
    @include('components.footer')
 </main>
-
 
