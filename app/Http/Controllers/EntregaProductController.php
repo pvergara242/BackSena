@@ -19,8 +19,9 @@ class EntregaProductController extends Controller
 
     public function index()
     {
-        $entregaProductos = EntregaProducts::latest()->paginate(6);
-        return view('entregaProductos.index', compact('entregaProductos') );
+        // $entregaProductos = EntregaProducts::latest()->paginate(6);
+        // return view('entregaProductos.index', compact('entregaProductos') );
+        return "hola";
     }
 
     public function create()
