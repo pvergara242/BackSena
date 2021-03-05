@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\EntregaProducts;
 use Illuminate\Http\Request;
+use App\Http\Requests\EntregaProductsRequest;
 
 class EntregaProductsController extends Controller
 {
@@ -25,7 +26,9 @@ class EntregaProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('entregaProductos.create', [
+            'entregaProductos' => new EntregaProducts
+        ]);
     }
 
     /**
@@ -34,9 +37,10 @@ class EntregaProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EntregaProductsRequest $request)
     {
-        //
+        EntregaProducts::create($request->validated() );
+        return redirect()->route('entregaProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
     }
 
     /**
@@ -47,7 +51,9 @@ class EntregaProductsController extends Controller
      */
     public function show(EntregaProducts $entregaProducts)
     {
-        //
+        return view('entregaProductos.show', [
+            'EntregaProducts' => EntregaProducts::findOrFail($id)
+        ]);
     }
 
     /**
@@ -58,7 +64,8 @@ class EntregaProductsController extends Controller
      */
     public function edit(EntregaProducts $entregaProducts)
     {
-        //
+        $entregaProductos = EntregaProducts::find($id);
+        return view('entregaProductos.edit', compact('entregaProductos'));
     }
 
     /**

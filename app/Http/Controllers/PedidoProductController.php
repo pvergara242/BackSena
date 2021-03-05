@@ -21,6 +21,7 @@ class PedidoProductController extends Controller
     {
         $pedidoProductos = PedidoProducts::latest()->paginate(6);
         return view('pedidoProductos.index', compact('pedidoProductos') );
+      
     }
 
     public function create()

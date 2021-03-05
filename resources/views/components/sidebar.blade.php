@@ -12,6 +12,7 @@
       <li><a href="{{ route('compra') }}"><i class="fas fa-shopping-basket"></i><span>Compras</span></a></li>
       <li><a href="{{ route('producto') }}"><i class="fas fa-shopping-basket"></i><span>Registro de productos</span></a></li>
       <li><a href="{{ route('entregaProducto') }}"><i class="fas fa-shopping-basket"></i><span>Entrega de productos</span></a></li>
+      <li><a href="{{ route('pedidoProducto') }}"><i class="fas fa-shopping-basket"></i><span>Pedido de productos</span></a></li>
    </div>
    
   
