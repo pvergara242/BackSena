@@ -13,7 +13,7 @@ class PedidoProducts extends Migration
      */
     public function up()
     {
-        Schema::create('pedido_products', function (Blueprint $table) {
+        Schema::create('pedido_productos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('fechaElaboracion', 20);
             $table->string('instructorEncargado', 120);
@@ -35,6 +35,6 @@ class PedidoProducts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedido_products');
+        Schema::dropIfExists('pedido_productos');
     }
 }

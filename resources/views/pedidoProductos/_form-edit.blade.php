@@ -1,6 +1,6 @@
 @include('partials.sessions_status')
 
-<form class="formulario" action="{{ route('pedidoProductos.update', $EntregaProductos->id) }}" method="POST">
+<form class="formulario" action="{{ route('pedidoProductos.update', $PedidoProductos->id) }}" method="POST">
    @csrf
    @method('PATCH')
  
@@ -40,7 +40,7 @@
       <input class="form-control" 
          type="number" 
          name="ficha" 
-         value="{{ $PedidoProductos->ficha }}">
+         value="{{ $PedidoProductos->ficha}}">
       <p class="text-danger text-center "><strong>{{ $errors->first('ficha') }}</strong></p>
    </div>
  

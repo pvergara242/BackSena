@@ -96,7 +96,7 @@
 
     <div class="container mb-5">
         <div class="col-md-4 mx-auto">
-           <a href="{{ route('pedidoProductos') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+           <a href="{{ route('pedidoProducto') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
      
         <button class="btn btn-success float-right" type="submit">Registrar Pedido</button>
         </div>   

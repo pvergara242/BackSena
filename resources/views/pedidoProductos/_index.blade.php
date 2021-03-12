@@ -21,7 +21,7 @@
                     <th class="">valorUnidad</th>
                     <th class="">cantidadProducir</th>
                     <th class="">valorProduccion</th>
-                    
+                    <th class="">Acciones</th>
                 </tr>
             </thead>
 
@@ -29,24 +29,24 @@
                 @guest
                 <h3 class="text-center bg-warning p-4">No hay pedidos por mostrar</h3>
                 @else 
-                @foreach ($PedidoProductos as $PedidoProductos)
+                @foreach ($pedido_products as $pedido_products)
                     <tr>
-                        <td>{{ $PedidoProductos->id }}</td>
-                        <td>{{ $PedidoProductos->fechaElaboracion }}</td>
-                        <td>{{ $PedidoProductos->instructorEncargado }}</td>
-                        <td>{{ $PedidoProductos->numeroDocumento }}</td>
-                        <td>{{ $PedidoProductos->programa }}</td>
-                        <td>{{ $PedidoProductos->ficha }}</td>
-                        <td>{{ $PedidoProductos->producto }}</td>
-                        <td>{{ $PedidoProductos->valorUnidad }}</td>
-                        <td>{{ $PedidoProductos->cantidadProducir }}</td>
-                        <td>{{ $PedidoProductos->valorProduccion }}</td>
+                        <td>{{ $pedido_products->id }}</td>
+                        <td>{{ $pedido_products->fechaElaboracion }}</td>
+                        <td>{{ $pedido_products->instructorEncargado }}</td>
+                        <td>{{ $pedido_products->numeroDocumento }}</td>
+                        <td>{{ $pedido_products->programa }}</td>
+                        <td>{{ $pedido_products->ficha }}</td>
+                        <td>{{ $pedido_products->producto }}</td>
+                        <td>{{ $pedido_products->valorUnidad }}</td>
+                        <td>{{ $pedido_products->cantidadProducir }}</td>
+                        <td>{{ $pedido_products->valorProduccion }}</td>
                         <td>
                             <div class="accions">
     
-                            <a class="btn btn-primary" href="{{ route('pedidoProductos.edit', $PedidoProductos->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
+                            <a class="btn btn-primary" href="{{ route('pedidoProductos.edit', $pedido_products->id) }}"><i class="fas fa-user-edit">&nbsp;</i> </a>
                             
-                            <form class="btnDelete" action="{{ route('pedidoProductos.destroy', $PedidoProductos->id) }}" method="POST">
+                            <form class="btnDelete" action="{{ route('pedidoProductos.destroy', $pedido_products->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"><i class="fas fa-trash-alt"></i></button>
@@ -64,6 +64,6 @@
         </table>
     </div>
 
-    <div class="pagination">{{ $EntregaProductos->links() }}</div>
+  
     
 </div>
