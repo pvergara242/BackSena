@@ -21,8 +21,8 @@ class CreateEntregaProductsTable extends Migration
             $table->string('nombreRegional', 120);
             $table->string('nombreCentroCostos', 120);
             $table->string('codigoCentroCostos', 120);
-            $table->string('coordinadorArea', 20);
-            $table->string('numeroDocumento', 20);
+            $table->string('coordinadorArea', 200);
+            $table->string('numeroDocumento', 200);
             $table->string('nombreServidorPublico', 20);
             $table->string('numeroDocumentoServidor', 180);
             $table->string('codigoFichaCaracterizacion', 20);

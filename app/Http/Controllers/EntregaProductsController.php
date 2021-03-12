@@ -32,7 +32,7 @@ class EntregaProductsController extends Controller
     public function show(EntregaProducts $entregaProductos)
     {
         return view('entregaProductos.show', [
-            'entregaProducto' => EntregaProducts::findOrFail($entregaProductos)
+            'entregaProductos' => EntregaProducts::findOrFail($entregaProductos)
         ]);
        
     }
@@ -41,6 +41,7 @@ class EntregaProductsController extends Controller
     {
         $entregaProductos = EntregaProducts::find($id);
         return view('entregaProductos.edit', compact('entregaProductos'));
+        
     }
     public function update(Request $request, $id)
     {
@@ -72,7 +73,7 @@ class EntregaProductsController extends Controller
         $EntregaProductos->area = $request->get('area');
         $EntregaProductos->codigoRegional = $request->get('codigoRegional');
         $EntregaProductos->nombreRegional = $request->get('nombreRegional');
-        $EntregaProductos->codigoCentroCostos = $request->get('codigoCentroCostos ');
+        $EntregaProductos->codigoCentroCostos = $request->get('codigoCentroCostos');
         $EntregaProductos->nombreCentroCostos = $request->get('nombreCentroCostos');
         $EntregaProductos->coordinadorArea = $request->get('coordinadorArea');
         $EntregaProductos->numeroDocumento = $request->get('numeroDocumento');
@@ -86,7 +87,6 @@ class EntregaProductsController extends Controller
         $EntregaProductos->observaciones = $request->get('observaciones');
         $EntregaProductos->nombre = $request->get('nombre');
         $EntregaProductos->cargo = $request->get('cargo');
-
         $EntregaProductos->save();
 
         return redirect()->route('entregaProducto')->with('primary', 'La entrega del producto fue actualizada exitosamente.');

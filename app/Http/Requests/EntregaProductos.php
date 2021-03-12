@@ -30,7 +30,7 @@ class EntregaProductsRequest extends FormRequest
             'nombreRegional'               => ['required', 'min:3', 'max:120'],
             'codigoCentroCostos'           => ['required', 'min:3', 'max:120'],
             'nombreCentroCostos'           => ['required', 'min:3', 'max:120'],
-            'coordinadorArea'               => ['required', 'min:1', 'max:50'],
+            'coordinadorArea'              => ['required', 'min:1', 'max:50'],
             'numeroDocumento'              => ['required', 'min:1', 'max:50'],
             'nombreServidorPublico'        => ['required', 'min:7', 'max:200'],
             'numeroDocumentoServidor'      => ['required', 'min:5', 'max:20'],

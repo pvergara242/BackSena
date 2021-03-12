@@ -80,7 +80,7 @@
           type="text" 
           name="numeroDocumento" 
           value="{{ old('numeroDocumento') }}"
-          placeholder="Cedula"
+          placeholder="numero Documento"
        >
        <p class="text-danger text-center "><strong>{{ $errors->first('numeroDocumento') }}</strong></p>
     </div>
@@ -100,7 +100,7 @@
            type="number" 
            name="numeroDocumentoServidor" 
            value="{{ old('numeroDocumentoServidor') }}"
-           placeholder="Cedula"
+           placeholder="numero documento servidor"
         >
         <p class="text-danger text-center "><strong>{{ $errors->first('numeroDocumentoServidor') }}</strong></p>
      </div>

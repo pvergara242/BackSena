@@ -143,7 +143,6 @@ class DatabaseSeeder extends Seeder
             'nombreServidorPublico' => 'perez',
             'numeroDocumentoServidor' => '234545345',
             'codigoFichaCaracterizacion' => '234354234',
-            'codigoSena' => '323432423',
             'cantidadEntregada' => '100',
             'descripcionBien' => 'nada',
             'unidadMedida' => '3534545345',
