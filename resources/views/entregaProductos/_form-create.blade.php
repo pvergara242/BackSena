@@ -72,7 +72,7 @@
           value="{{ old('coordinadorArea') }}"
           placeholder="Coordinador de Area"
        >
-       <p class="text-danger text-center "><strong>{{ $errors->first('ManejaLotes') }}</strong></p>
+       <p class="text-danger text-center "><strong>{{ $errors->first('coordinadorArea') }}</strong></p>
     </div>
     
     <div class="inpForm">

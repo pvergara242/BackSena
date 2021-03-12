@@ -15,18 +15,20 @@ class CreateEntregaProductsTable extends Migration
     {
         Schema::create('entrega_products', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('fechaSolicitud', 20);
+            $table->string('fechaSolicitud',20);
             $table->string('area', 120);
             $table->string('codigoRegional', 120);
-            $table->date('codigoCentroCostos', 120);
+            $table->string('nombreRegional', 120);
             $table->string('nombreCentroCostos', 120);
-            $table->string('cordinadorArea', 120);
-            $table->string('numeroDocumento', 200);
+            $table->string('codigoCentroCostos', 120);
+            $table->string('coordinadorArea', 20);
+            $table->string('numeroDocumento', 20);
             $table->string('nombreServidorPublico', 20);
-            $table->string('CantcodigoFichaCaracterizacionidades', 20);
-            $table->string('codigoSena', 20);
-            $table->string('descripcionBien', 180);
-            $table->string('unidadMedida', 20);
+            $table->string('numeroDocumentoServidor', 180);
+            $table->string('codigoFichaCaracterizacion', 20);
+            $table->string('codigoSena', 120);
+            $table->string('descripcionBien', 120);
+            $table->string('unidadMedida', 120);
             $table->string('cantidadSolicitada', 120);
             $table->string('cantidadEntregada', 120);
             $table->string('observaciones', 120);

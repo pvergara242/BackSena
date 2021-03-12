@@ -8,7 +8,7 @@ Route::get('/', function () {return view('auth.login');});
 
 Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
 Route::get('ventas', 'VentasController@index')->name('ventas')->middleware('auth');
-Route::get('inventario', 'InventarioController@index')->name('inventario')->middleware('auth');
+
 Route::get('compras', 'ComprasController@index')->name('compras')->middleware('auth');
 Route::get('entregaProductos', 'EntregaProductsController@index')->name('entregaProductos')->middleware('auth');
 Route::get('pedidoProductos', 'PedidoProductController@index')->name('pedidoProductos')->middleware('auth');
