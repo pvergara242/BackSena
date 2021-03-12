@@ -72,7 +72,7 @@
           value="{{ old('coordinadorArea') }}"
           placeholder="Coordinador de Area"
        >
-       <p class="text-danger text-center "><strong>{{ $errors->first('ManejaLotes') }}</strong></p>
+       <p class="text-danger text-center "><strong>{{ $errors->first('coordinadorArea') }}</strong></p>
     </div>
     
     <div class="inpForm">
@@ -80,7 +80,7 @@
           type="text" 
           name="numeroDocumento" 
           value="{{ old('numeroDocumento') }}"
-          placeholder="Cedula"
+          placeholder="numero Documento"
        >
        <p class="text-danger text-center "><strong>{{ $errors->first('numeroDocumento') }}</strong></p>
     </div>
@@ -100,7 +100,7 @@
            type="number" 
            name="numeroDocumentoServidor" 
            value="{{ old('numeroDocumentoServidor') }}"
-           placeholder="Cedula"
+           placeholder="numero documento servidor"
         >
         <p class="text-danger text-center "><strong>{{ $errors->first('numeroDocumentoServidor') }}</strong></p>
      </div>
@@ -199,7 +199,7 @@
  
     <div class="container mb-5">
        <div class="col-md-4 mx-auto">
-          <a href="{{ route('entregaProductos') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
+          <a href="{{ route('entregaProducto') }}" class="btn btn-danger"><i class="fas fa-window-close"></i> Cancelar</a>  
     
        <button class="btn btn-success float-right" type="submit">REGISTRAR</button>
        </div>   

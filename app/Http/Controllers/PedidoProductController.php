@@ -21,33 +21,34 @@ class PedidoProductController extends Controller
     {
         $pedidoProductos = PedidoProducts::latest()->paginate(6);
         return view('pedidoProductos.index', compact('pedidoProductos') );
+      
     }
 
     public function create()
     {
         return view('pedidoProductos.create', [
-            'pedidoProductos' => new PedidoProducts
+            'pedidoProductos' => new CreatePedidoProducts
         ]);
     }
 
     public function store(PedidoProductosRequest $request)
     {
-        PedidoProducts::create($request->validated() );
+        CreatePedidoProducts::create($request->validated() );
         return redirect()->route('pedidoProductos')->with('success', 'El producto ha sido entregado satisfactoriamente ');
     }
 
     public function show($id)
     {
         return view('pedidoProductos.show', [
-            'pedidoProductos' => PedidoProducts::findOrFail($id)
+            'pedidoProductos' => CreatePedidoProducts::findOrFail($id)
         ]);
     }
     public function edit($id)
     {
-        $PedidoProductos = PedidoProducts::find($id);
+        $PedidoProductos = CreatePedidoProducts::find($id);
         return view('pedidoProductos.edit', compact('pedidoProductos'));
     }
-    public function update(Request $request, $id)
+    public function update(PedidoProductosRequest $request, $id)
     {
         $request->validate([
             'fechaElaboracion' => 'required',
@@ -61,16 +62,16 @@ class PedidoProductController extends Controller
             'valorProduccion' => 'required',
         ]);
 
-        $PedidoProductos = PedidoProducts::find($id);
-        $PedidoProductos->fechaElaboracion = $request->get('fechaSolicitud');
-        $PedidoProductos->instructorEncargado = $request->get('area');
-        $PedidoProductos->numeroDocumento = $request->get('codigoRegional');
-        $PedidoProductos->programa = $request->get('nombreRegional');
-        $PedidoProductos->ficha = $request->get('codigoCentroCostos ');
-        $PedidoProductos->producto = $request->get('nombreCentroCostos');
-        $PedidoProductos->valorUnidad = $request->get('cordinadorArea');
-        $PedidoProductos->cantidadProducir = $request->get('numeroDocumento');
-        $PedidoProductos->valorProduccion = $request->get('numeroDocumento');
+        $PedidoProductos = CreatePedidoProducts::find($id);
+        $PedidoProductos->fechaElaboracion = $request->get('fechaElaboracion');
+        $PedidoProductos->instructorEncargado = $request->get('instructorEncargado');
+        $PedidoProductos->numeroDocumento = $request->get('numeroDocumento');
+        $PedidoProductos->programa = $request->get('programa');
+        $PedidoProductos->ficha = $request->get('ficha ');
+        $PedidoProductos->producto = $request->get('producto');
+        $PedidoProductos->valorUnidad = $request->get('valorUnidad');
+        $PedidoProductos->cantidadProducir = $request->get('cantidadProducir');
+        $PedidoProductos->valorProduccion = $request->get('valorProduccion');
         $PedidoProductos->save();
 
         return redirect()->route('PedidoProductos')->with('primary', 'La entrega del producto fue actualizada exitosamente.');
@@ -78,7 +79,7 @@ class PedidoProductController extends Controller
 
     public function destroy($id)
     {
-        $PedidoProductos = PedidoProducts::find($id);
+        $PedidoProductos = CreatePedidoProducts::find($id);
         $PedidoProductos->delete();
 
         return redirect()->route('pedidoproductos')->with('danger', 'La entrega del producto ha sido eliminada correctamente.');

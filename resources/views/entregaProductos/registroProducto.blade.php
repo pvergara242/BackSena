@@ -38,7 +38,7 @@
         <a href="./entregaProductos.html"><i class="fas fa-shopping-basket"></i><span>Registro de entrega de productos</span></a>
     </div>
     <!-- sidebar fin  -->
-    
+        
     <form className="container-form" style="margin-top:100px; margin-left:420px;
     width: 60%; justify-content: center;">
         <h2 className="title-form" style="text-align: center;"> REGISTRO DE PRODUCTOS</h2>
@@ -105,7 +105,7 @@
        
         <div className="form-buttons"> 
           <button className="form-button" style="margin-left: 300px; margin-top: 30px;">Cancelar</button>
-          <button className="form-button">Registar</button>
+          <button className="form-button">Registrar</button>
         </div>
         
       </form>

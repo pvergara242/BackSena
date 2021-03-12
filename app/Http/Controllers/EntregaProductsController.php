@@ -4,83 +4,99 @@ namespace App\Http\Controllers;
 
 use App\EntregaProducts;
 use Illuminate\Http\Request;
+use App\Http\Requests\EntregaProductsRequest;
 
 class EntregaProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $entregaProductos = EntregaProducts::latest()->paginate(6);
-        return view('entregaProductos.index', compact('entregaProductos') );
+        $entrega_products = EntregaProducts::latest()->paginate(6);
+        return view('entregaProductos.index', compact('entrega_products') );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return view('entregaProductos.create', [
+            'entregaProducto' => new EntregaProducts
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(EntregaProductsRequest $request)
     {
-        //
+        EntregaProducts::create($request->validated() );
+        return redirect()->route('entregaProducto')->with('success', 'El producto ha sido entregado satisfactoriamente ');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\EntregaProducts  $entregaProducts
-     * @return \Illuminate\Http\Response
-     */
-    public function show(EntregaProducts $entregaProducts)
+    public function show(EntregaProducts $entregaProductos)
     {
-        //
+        return view('entregaProductos.show', [
+            'entregaProductos' => EntregaProducts::findOrFail($entregaProductos)
+        ]);
+       
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\EntregaProducts  $entregaProducts
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(EntregaProducts $entregaProducts)
+    public function edit($id)
     {
-        //
+        $entregaProductos = EntregaProducts::find($id);
+        return view('entregaProductos.edit', compact('entregaProductos'));
+        
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'fechaSolicitud' => 'required',
+            'area'  => 'required',
+            'codigoRegional' => 'required',
+            'nombreRegional' => 'required',
+            'codigoCentroCostos' => 'required',
+            'nombreCentroCostos' => 'required',
+            'coordinadorArea' => 'required',
+            'numeroDocumento' => 'required',
+            'nombreServidorPublico' => 'required',
+            'numeroDocumentoServidor' => 'required',
+            'codigoFichaCaracterizacion' => 'required',
+            'codigoSena' => 'required',
+            'descripcionBien' => 'required',
+            'unidadMedida' => 'required',
+            'cantidadSolicitada' => 'required',
+            'cantidadEntregada' => 'required',
+            'observaciones' => 'required',
+            'nombre' => 'required',
+            'cargo' => 'required',
+
+        ]);
+
+        $EntregaProductos = EntregaProducts::find($id);
+        $EntregaProductos->fechaSolicitud = $request->get('fechaSolicitud');
+        $EntregaProductos->area = $request->get('area');
+        $EntregaProductos->codigoRegional = $request->get('codigoRegional');
+        $EntregaProductos->nombreRegional = $request->get('nombreRegional');
+        $EntregaProductos->codigoCentroCostos = $request->get('codigoCentroCostos');
+        $EntregaProductos->nombreCentroCostos = $request->get('nombreCentroCostos');
+        $EntregaProductos->coordinadorArea = $request->get('coordinadorArea');
+        $EntregaProductos->numeroDocumento = $request->get('numeroDocumento');
+        $EntregaProductos->nombreServidorPublico = $request->get('nombreServidorPublico');
+        $EntregaProductos->numeroDocumentoServidor = $request->get('numeroDocumentoServidor');
+        $EntregaProductos->codigoFichaCaracterizacion = $request->get('codigoFichaCaracterizacion');
+        $EntregaProductos->codigoSena = $request->get('codigoSena');
+        $EntregaProductos->descripcionBien = $request->get('descripcionBien');
+        $EntregaProductos->unidadMedida = $request->get('unidadMedida');
+        $EntregaProductos->cantidadSolicitada = $request->get('cantidadSolicitada');
+        $EntregaProductos->observaciones = $request->get('observaciones');
+        $EntregaProductos->nombre = $request->get('nombre');
+        $EntregaProductos->cargo = $request->get('cargo');
+        $EntregaProductos->save();
+
+        return redirect()->route('entregaProducto')->with('primary', 'La entrega del producto fue actualizada exitosamente.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\EntregaProducts  $entregaProducts
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, EntregaProducts $entregaProducts)
+    public function destroy($id)
     {
-        //
-    }
+        $EntregaProductos = EntregaProducts::find($id);
+        $EntregaProductos->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\EntregaProducts  $entregaProducts
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(EntregaProducts $entregaProducts)
-    {
-        //
+        return redirect()->route('entregaProducto')->with('danger', 'La entrega del producto ha sido eliminada correctamente.');
     }
 }

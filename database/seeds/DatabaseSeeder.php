@@ -131,7 +131,30 @@ class DatabaseSeeder extends Seeder
         //     'TotalRetenciónFuente' => '1234567432',
         // ]);
         
-        // DB::table('entrega_products')->insert([
+        DB::table('entrega_products')->insert([
+            'fechaSolicitud' => '6634355454',
+            'area' => 'Mercedes',
+            'codigoRegional' => '435645645',
+            'nombreRegional' => 'Perez',
+            'codigoCentroCostos' => '3453454',
+            'nombreCentroCostos' => 'julia',
+            'coordinadorArea' => 'Me llamo yo',
+            'numeroDocumento' => '234234234',
+            'nombreServidorPublico' => 'perez',
+            'numeroDocumentoServidor' => '234545345',
+            'codigoFichaCaracterizacion' => '234354234',
+            'cantidadEntregada' => '100',
+            'descripcionBien' => 'nada',
+            'unidadMedida' => '3534545345',
+            'cantidadSolicitada' => '34345345345',
+            'observaciones' => 'entrega',
+            'nombre' => 'juliana',
+            'cargo' => 'estudiante',
+            'created_at' => '2020-10-09 13:42:26',
+            'updated_at' => '2020-10-09 13:42:32',
+        ]);
+        
+        // DB::table('pedido_productos')->insert([
         //     'fechaSolicitud' => '6634355454',
         //     'area' => 'Mercedes',
         //     'codigoRegional' => 'Maria',
@@ -153,5 +176,6 @@ class DatabaseSeeder extends Seeder
         //     'created_at' => '2020-10-09 13:42:26',
         //     'updated_at' => '2020-10-09 13:42:32',
         // ]);
+
     }
 }
